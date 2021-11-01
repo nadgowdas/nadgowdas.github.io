@@ -2,7 +2,7 @@
 layout: page
 title: tapestry
 description: DevSecOps for real world 
-img: /assets/img/3.jpg
+img: assets/img/3.jpg
 importance: 1
 category: work
 ---

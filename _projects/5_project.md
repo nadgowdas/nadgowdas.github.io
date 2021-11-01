@@ -2,7 +2,7 @@
 layout: page
 title: columbus
 description: File based software discovery
-img: /assets/img/3.jpg
+img: assets/img/3.jpg
 importance: 1
 category: fun
 ---

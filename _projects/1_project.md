@@ -2,7 +2,7 @@
 layout: page
 title: GitSecure
 description: Code Risk Analyzer 
-img: /assets/img/12.jpg
+img: assets/img/12.jpg
 importance: 1
 category: work
 ---

@@ -2,7 +2,7 @@
 layout: page
 title: RunEscape
 description: Dynamically injected utility functions
-img: /assets/img/5.jpg
+img: assets/img/5.jpg
 importance: 1
 category: fun
 ---

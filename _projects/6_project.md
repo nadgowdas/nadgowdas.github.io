@@ -2,7 +2,7 @@
 layout: page
 title: Paracloud
 description: Sidecar utility for cloud
-img: /assets/img/4.jpg
+img: assets/img/4.jpg
 importance: 1
 category: fun
 ---

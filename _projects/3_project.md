@@ -2,7 +2,7 @@
 layout: page
 title: confuse
 description: Container Filesystem in Userspace
-img: /assets/img/1.jpg
+img: assets/img/1.jpg
 importance: 1
 category: work
 ---
