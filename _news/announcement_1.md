@@ -1,7 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+title: Cloud-Native Security Con Talk
+date: 2021-11-31 16:11:00-0400
 inline: true
 ---
 
-A simple inline announcement.
+The Cloud-native Security Con talk at Kubecon 2021 on "CICD Pipeline Security" is available <a href="https://www.youtube.com/watch?v=cshICut7apQ">online</a>
