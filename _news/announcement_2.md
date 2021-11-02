@@ -1,7 +1,7 @@
 ---
 layout: post
 title: TheNewStack Article
-date: 2021-11-07 16:11:00-0400
+date: 2021-10-07 16:11:00-0400
 inline: true
 ---
 

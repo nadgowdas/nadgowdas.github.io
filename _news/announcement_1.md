@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cloud-Native Security Con Talk
-date: 2021-11-31 16:11:00-0400
+date: 2021-10-31 16:11:00-0400
 inline: true
 ---
 
