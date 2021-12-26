@@ -2,73 +2,34 @@
 layout: page
 title: RunEscape
 description: Dynamically injected utility functions
-img: assets/img/5.jpg
+img: /assets/img/run-escape.jpg
 importance: 1
 category: fun
 ---
 
-TO BE ADDED
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/5.jpg
-    ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/1.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/3.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/5.jpg' | relative_url }}" alt="" title="example image"/>
+        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/run-escape.jpg' | relative_url }}" alt="" title="example image"/>
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/5.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Image from unsplash
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal it's glory in the next row of images.
+As I got more into managing cloud-native applications on kubernetes, I started to realize our existing models of packaging a container image to make it look more like traditional VM image with all OS utility functions, with any required network/file management tools was very in-efficient. It made our container images bulky and exposed them to larger attack surface. At the same time, micro-containers, multi-stage build patterns started becoming popular and we started to brainstorm about this space with my colleagues, we came up with "runescape". What if we could dynamically inject all utility functions to our container application at  runtime? We  would need sfew  tricks with namespace sharing, affinity placements and careful removal, but yes should be possible. 
+
+Again, this  would be different than Istio sidecar, wherein the sidecar container is transparently added during the deployment and is parmanently attached to your application throughout the lifecycle. In RunEscape we are talking about scenarios, where you deploy your application first, and then at later point in time, say you want to run `top` inside the container -- at that point you inject a sidecar containing only `top` utility into your application container, run it, capture the result and then remove the sidecar. Fancy huh ??
+
+This is also different than the approach described in this <a href="hhttps://engineering.salesforce.com/a-generic-sidecar-injector-for-kubernetes-c05eede1f6bb">post</a>. This approach is similar to the istio one, wherein the sidecar is attached throughout the  lifecycle of an application. We are talking about "on-demand" utility functions. 
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/6.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/11.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+If you want to learn more about "RunEscape", I have listed some resources below:
+
+### Paper Abstract:
+Application runtimes are undergoing a fundamental transformation in the cloud, from general-purpose op- erating systems (OSes) in virtual machines (VMs) to lightweight, minimal OSes in microcontainers. On one hand, such transformation is helping reduce application footprint in the cloud to increase agility, density and to minimize attack surface. On the other hand it makes it challenging to implement system and application man- agement tasks. Inspired from the on-demand Function as a Service (FaaS) model in serverless computing, in RECap we are designing a cloud-native solution to deliver core systems and application management tasks through specially-managed Capsule containers. Capsule containers are dynamically attached to the running containers for the duration of their implemented function and are safely removed from application context afterwards. More generally, RECap framework allows us to design disaggregated on-demand managed service delivery for containers in the cloud. In this paper, we describe the motivation and the emerging opportunity for RECap in the cloud. We discuss its core design principles, performance, security and manageability trade-offs. We present current design of RECap for the Kubernetes platform.
+
+### Paper Link: 
+<a href="https://www.usenix.org/conference/hotcloud18/presentation/nadgowda">Click Here</a> 
 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/6.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/11.jpg' | relative_url }}" alt="" title="example image"/>
-    </div>
-</div>
-```

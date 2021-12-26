@@ -1,76 +1,25 @@
 ---
 layout: page
 title: Paracloud
-description: Sidecar utility for cloud
+description: Making  your applications aware of cloud
 img: assets/img/4.jpg
 importance: 1
 category: fun
 ---
 
-TO BE ADDED
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+As containers became popular around 2015-16, I got opportunity to be on the front and build cloud platform for containers. And then, started working on building various micro-service applications on that cloud. Containers obviously had a major attractions that we didn't had to change our applications. THe novel container image packaging with Docker, allowed us to easily port existing applications to containers.
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/1.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/3.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/5.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/5.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+As I was building more and more of these applications, I thought how much (as a user) do I desire to port my application "as-is" without any refactoring ? And then, through some discussion with my colleagues, we came up with few use-cases where it would make more sense to  make our applications aware of the underlying cloud infrastructure. And then came up with this idea of "Paracloud", in which we change the packaging/runtime of our applications to make them aware that they are running on cloud and see if that can assist with routine cloud management functions like load-balacing/monitoring/migration. We had submitted a short paper on this idea at  <a href="https://www.usenix.org/conference/hotcloud17/program/presentation/nadgowda">Usenix HotCloud'17</a> workshop. 
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal it's glory in the next row of images.
+Nowadays, kubernetes "operators" have made this a common design patterns. We are building more and more specialized operators by embedding application specific knowledge into them to manage their lifecycle.
+
+If you want to learn more about "Paracloud", I have listed some resources below:
+
+### Paper Abstract:
+Applications have commonly been oblivious to their cloud runtimes. This is primarily because they started their journey in IaaS clouds, running on a guestOS inside VMs. Then to increase performance, many guestOSes have been paravirtualized making them virtualization aware, so that they can bypass some of the virtualization layers, as in virtio. This approach still kept applications unmodified. Recently, we are witnessing a rapid adoption of containers due to their packaging benefits, high density, fast start-up and low overhead. Applications are increasingly being on-boarded to PaaS clouds in the form of application containers or appc, where they are run directly on a cloud substrate like Kubernetes or Docker Swarm. This shift in deployment practices present an opportunity to make applications aware of their cloud. In this paper, we present Paracloud framework for application containers and discuss the Paracloud interface (PaCI) for three cloud operations namely migration, auto-scaling and load-balancing.
+
+### Paper Link: 
+<a href="https://www.usenix.org/conference/hotcloud17/program/presentation/nadgowda">Click Here</a> 
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/6.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/11.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/6.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/11.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
