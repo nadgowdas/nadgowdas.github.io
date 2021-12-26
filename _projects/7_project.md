@@ -2,7 +2,7 @@
 layout: page
 title: RunEscape
 description: Dynamically injected utility functions
-img: /assets/img/run-escape.jpg
+img: assets/img/3.jpg
 importance: 1
 category: work
 ---
@@ -10,11 +10,11 @@ category: work
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        <img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/run-escape.jpg' | relative_url }}" alt="" title="example image"/>
+        {% responsive_image path: assets/img/5.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Image from unsplash
+    This image can also have a caption. It's like magic.
 </div>
 
 As I got more into managing cloud-native applications on kubernetes, I started to realize our existing models of packaging a container image to make it look more like traditional VM image with all OS utility functions, with any required network/file management tools was very in-efficient. It made our container images bulky and exposed them to larger attack surface. At the same time, micro-containers, multi-stage build patterns started becoming popular and we started to brainstorm about this space with my colleagues, we came up with "runescape". What if we could dynamically inject all utility functions to our container application at  runtime? We  would need sfew  tricks with namespace sharing, affinity placements and careful removal, but yes should be possible. 
