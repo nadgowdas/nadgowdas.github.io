@@ -4,7 +4,7 @@ title: RunEscape
 description: Dynamically injected utility functions
 img: /assets/img/run-escape.jpg
 importance: 1
-category: fun
+category: work
 ---
 
 

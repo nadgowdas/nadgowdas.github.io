@@ -4,73 +4,22 @@ title: columbus
 description: File based software discovery
 img: assets/img/3.jpg
 importance: 1
-category: fun
+category: work
 ---
 
-TO BE ADDED
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/1.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/3.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/5.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% responsive_image path: assets/img/5.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Software Discovery
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal it's glory in the next row of images.
+This was one project that I started purely based on some intuition -- when developers builds their software they tend to organize various files/binaries in some common patterns. For instance, they would start name of each compiled binary to start with the name of the software itself. For instance, all binaries for `mysql` application are named `mysqld`, `mysqladmin`, `mysqldump` ..? Coincidence ? In 2016-17, I went ahead and built a software discovery solution based on this intuition. And then, when we ran experiments with it against then available official public images from DockerHub (~150 of them), we were surprised to see >90% accurancy. Of-course, this is not a reliable method for discovery discovery as it can easily be tricked by changing naming patterns. But, it can be used as a starting point for more sophisticated discovery techniques. And that's what  we did. After initial evaluation, we collaborated with researchers/students from Boston University and built a more advanced ML model on top of this.  
 
+### Paper Abstract: 
+Software discovery is a key management function to ensure that systems are free of vulnerabilities, comply with licensing requirements, and support advanced search for systems containing given software. Today, software is predominantly discovered through querying package management tools, or using rules that check for file metadata or contents. These approaches are inadequate as not every software is installed through package managers, and agile development practices lead to frequent de- ployment of software. Other approaches to software discovery use machine learning methods requiring training phase, or require maintaining knowledge bases. Columbus uses the knowledge of the software packaging practices that evolved over time, and uses the information embedded in the file system impression created by a software package to discover it. Columbus is able to discover software in 92% of all official Docker images. Further, Columbus can be used in problem diagnosis and drift detection situations to compare two different systems, or to determine the evolution of a system overtime.
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/6.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/11.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/6.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/11.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+### Paper Link: 
+<a href="https://ieeexplore.ieee.org/document/7923788">Click Here</a> 
