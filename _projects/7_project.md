@@ -14,7 +14,7 @@ category: work
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    RunEscape: Dynamic Utility for Cloud
 </div>
 
 As I got more into managing cloud-native applications on kubernetes, I started to realize our existing models of packaging a container image to make it look more like traditional VM image with all OS utility functions, with any required network/file management tools was very in-efficient. It made our container images bulky and exposed them to larger attack surface. At the same time, micro-containers, multi-stage build patterns started becoming popular and we started to brainstorm about this space with my colleagues, we came up with "runescape". What if we could dynamically inject all utility functions to our container application at  runtime? We  would need sfew  tricks with namespace sharing, affinity placements and careful removal, but yes should be possible. 

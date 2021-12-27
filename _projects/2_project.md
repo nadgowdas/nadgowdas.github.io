@@ -2,76 +2,27 @@
 layout: page
 title: Cargo
 description: Container Migratioon 
-img: assets/img/3.jpg
+img: assets/img/6.jpg
 importance: 2
 category: work
 ---
 
-TO BE ADDED
-
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/1.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/3.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/5.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/5.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal it's glory in the next row of images.
-
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
         {% responsive_image path: assets/img/6.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
     </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/11.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
 </div>
 <div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
+    Container Migration
 </div>
 
+Before we start debate on "do we really need to migrate containers ?", I want to point out this was one of the important business use-case in 2015-16. I had worked on VM migrations in cloud in the past. And when I heard about  this requirement for containers, I was really motivated to address it. There were couple of open-source solutions available at the time, most prominent  being the "flocker", although it  was tied to the use of zfs. In "Cargo" I took file-system agnostic approach and built a solution for migrating "rootfs" of  containers. I  also tried using CRIU (it was in very early stage  that that time) for migrating in-memory state. When I wrote a research paper on this at IC2E'17, I received many inquiries by academic researchers who wanted  to  explore this  area further.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+Although,  today (2021/22) I would think container migration is not really  needed. Our "rootfs" should be immutable and easily replicated across nodes through "golden images", mounted volumes should be plug-and-play  across nodes. And I am still not convinced we need to migrate in-memory  state. Yes, its important  for lot of stateful applications, but these days, applications have became so resilient that loss of this state during  migration should not be a big deal. Applications would be able to restore that state easily. 
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/6.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/11.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+### Paper Abstract:
+Due to the small memory footprint and fast startup times offerred by container virtualization, made ever more popular by the Docker platform, con- tainers are seeing rapid adoption as a foundational capability to build PaaS and SaaS clouds. For such container clouds, which are fundamentally different from VM clouds, various cloud management services need to be revisited. In this paper, we present our Voyager - just-in-time live container migration service, designed in accordance with the Open Container Ini- tiative (OCI) principles. Voyager is a novel filesystem- agnostic and vendor-agnostic migration service that provides consistent full-system migration.Voyager com- bines CRIU-based memory migration together with the data federation capabilities of union mounts to minimize migration downtime. With a union view of data between the source and target hosts, Voyager containers can resume operation instantly on the target host, while performing disk state transfer lazily in the background.
+
+### References (IEEE IC2E'17 Paper)
+<a href="https://ieeexplore.ieee.org/abstract/document/7980161">Click Here</a>
+

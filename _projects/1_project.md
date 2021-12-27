@@ -2,75 +2,40 @@
 layout: page
 title: GitSecure
 description: Code Risk Analyzer 
-img: assets/img/12.jpg
+img: assets/img/10.jpg
 importance: 1
 category: work
 ---
 
-TO BE ADDED
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/1.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/3.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/5.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
+        {% responsive_image path: assets/img/10.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/5.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+    Container Migration
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal it's glory in the next row of images.
+I was part of the team at research when we built first-of its kind, security scanner for container images  and running containers. It is part of IBM Cloud as <a href="https://www.ibm.com/docs/en/SSBS6K_3.2.0/manage_cluster/vuln_advisor.html">Vulnerability Advisor</a> offering. Later as I was leading some security and compliance solution extensions, I realized the need for building these solutions close to the developer's workflow. And at the same time DevSecOps was becoming the "thing". So I started designing and building this solution called "GitSecure" in 2017. The objective was to embed security analytic into the developer workflow. GitSecure was the first instance, where I had implemented Docker CIS evaluations  from static deployment definitions for cloud-native workloads. 
+
+This project is now available on IBM Cloud under <a href="https://www.ibm.com/cloud/blog/announcements/find-source-code-vulnerabilities-with-code-risk-analyzer">Code Risk Analyzer (CRA)</a> offering. This was one of the foundational compliance control for IBM Financial Cloud. 
+
+GitSecure holds tremendous potential to improve security and compliance automations. I had described a framework around end-to-end automation in my blog Code2Container. The basic idea is simple -- just like we have control loop in kubernetes wherein we describe our desire state for application through `spec` and controllers and then responsible to ensure that state is satisfied. We describe our compliance state as "desire-state" and build automated engine that monitors any discrepency (e.g. new vulnerability, runtime intrusion etc.) and drives concilor loop to fix the state (e.g. create a PR to upgrade vulnerable package). 
+
+Our DevSecOps should also include "smart updates" that would notify users about newer versions of their dependencies.  ( yes, like existing solutions like Whitesource renovate). But, it should also give "reasons" for developers to upgrade their dependencies. Would it improve performance ? Does it fix any bugs ?
+
+### References:
+
+<a href="https://www.ibm.com/blogs/research/2020/11/secdevops-security-compliance/">Research Blog</a>
+
+<a href="ttps://www.infoworld.com/article/3588100/ibm-adds-code-risk-analyzer-to-cloud-based-cicd.html">CRA Infoworld </a>
+
+<a href="https://developer.ibm.com/articles/federation-of-security-controls/">Code2Container Article</a>
+
+<a href="https://anchor.fm/ibm-cloud-podcast/episodes/What-is-DevSecOps-and-Software-Supply-Chain-Security-e16sfdp">IBM Cloud Podcast on DevSecOps and SupplyChainSecurity</a>
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/6.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/11.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/6.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% responsive_image path: assets/img/11.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+
