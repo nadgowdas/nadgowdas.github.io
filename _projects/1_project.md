@@ -13,7 +13,7 @@ category: work
     </div>
 </div>
 <div class="caption">
-    Container Migration
+    All about DevSecOps
 </div>
 
 I was part of the team at research when we built first-of its kind, security scanner for container images  and running containers. It is part of IBM Cloud as <a href="https://www.ibm.com/docs/en/SSBS6K_3.2.0/manage_cluster/vuln_advisor.html">Vulnerability Advisor</a> offering. Later as I was leading some security and compliance solution extensions, I realized the need for building these solutions close to the developer's workflow. And at the same time DevSecOps was becoming the "thing". So I started designing and building this solution called "GitSecure" in 2017. The objective was to embed security analytic into the developer workflow. GitSecure was the first instance, where I had implemented Docker CIS evaluations  from static deployment definitions for cloud-native workloads. 
