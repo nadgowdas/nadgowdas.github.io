@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Cloud-Native Security Con at Kubecon EU 2022
-date: 2022-03-28 07:00:00-0400
+date: 2022-05-26 07:00:00-0400
 inline: true
 ---
 
-Excited to present our talk on CICD Pipeline Security at Cloud-Native Security Con at Kubecon'EU 2022. <a href="https://sched.co/zsTO">Schedule</a>
+"Protect the Pipe!" talk at Cloud-Native Security Con at Kubecon'EU 2022 is now available at <a href="https://youtu.be/zVkumUImIao">Link</a>
  
