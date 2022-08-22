@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-description: <a href="#">Intel</a>. New York.
+description: <a href="#">Intel Corp.</a>. New York.
 
 profile:
   align: right
