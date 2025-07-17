@@ -17,4 +17,4 @@ social: true  # includes social icons at the bottom of the page
 I love playing tennis, cricket and watching bastketball, americal football. According to my wife, I cook great spicy Indian dishes :). I do like to travel and explore. 
 
 
-In my spare time  I take pride in designing and developing large scale distributed secure systems and more importantly driving research innovations that brings differentiating capabilities to make cloud more secure. My current area of research includes Designing and building foundation cloud services, Supply Chain Security, DevSecOps, Security and Compliance for Containers. 
+In my spare time  I take pride in designing and developing large scale distributed secure systems and more importantly driving research innovations that brings differentiating capabilities to  cloud. My current area of research includes Designing and building foundation AI cloud services, AI workload orchestrations, Software Supply Chain Security, Security and Compliance for Containers. 
