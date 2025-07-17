@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AI Regulations
-date: 2025-07-16 07:00:00-0400
+date: 2025-07-17 07:00:00-0400
 inline: true
 ---
 
