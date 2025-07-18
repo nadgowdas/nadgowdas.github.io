@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>
+
+  Shripad Nadgowda
+
+
+  | Are you ready with your SBOM ? Think again !
+
+</title>
+<meta name="description" content="Tech Preview: Ruminations around Container, Cloud and Security
+">
+
+<!-- Open Graph -->
+
+
+<!-- Bootstrap & MDB -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+
+<!-- Fonts & Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"  integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+<!-- Code Syntax Highlighting -->
+<link rel="stylesheet" href="https://gitcdn.link/repo/jwarby/jekyll-pygments-themes/master/github.css" />
+
+<!-- Styles -->
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
+
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="canonical" href="/blog/2021/trust-sbom/">
+
+
+<!-- Dark Mode -->
+<script src="/assets/js/theme.js"></script>
+<script src="/assets/js/dark_mode.js"></script>
+
+
+
+  </head>
+
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+
+    <header>
+
+    <!-- Nav Bar -->
+    <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+    <div class="container">
+      
+      <a class="navbar-brand title font-weight-lighter" href="https://nadgowdas.github.io/">
+       Shripad Nadgowda
+      </a>
+      
+      <!-- Navbar Toggle -->
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <!-- About -->
+          <li class="nav-item ">
+            <a class="nav-link" href="/">
+              about
+              
+            </a>
+          </li>
+          
+          <!-- Blog -->
+          <li class="nav-item active">
+            <a class="nav-link" href="/blog/">
+              blog
+              
+            </a>
+          </li>
+          
+          <!-- Other pages -->
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/projects/">
+                projects
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="nav-item ">
+              <a class="nav-link" href="/publications/">
+                publications
+                
+              </a>
+          </li>
+          
+          
+          
+          
+          
+          <li class="nav-item dropdown ">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                submenus
+                
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              
+              
+                <a class="dropdown-item" href="/publications/">publications</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="/projects/">projects</a>
+              
+              
+              </div>
+          </li>
+          
+          
+          
+          
+            <div class="toggle-container">
+              <a id="light-toggle">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+              </a>
+            </div>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+
+    <!-- Content -->
+
+    <div class="container mt-5">
+      
+
+
+
+
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Are you ready with your SBOM ? Think again !</h1>
+    <p class="post-meta">June 23, 2021</p>
+    <p class="post-tags">
+      <a href="/blog/2021"> <i class="fas fa-calendar fa-sm"></i> 2021 </a>
+      
+
+      
+
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p>Security and Integrity of software supply chain is one of the fundamental requirements in the overall assessment of cybersecurity. The first step in securing software supply chain is the ability to provide complete, accurate and audit-able record of every dependency baked into building a deliverable software product or as generally referred to as Software Bill-of-Material (SBOM). Well, it also has an <a href="https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/" target="_blank" rel="noopener noreferrer">executive</a>  status now!</p>
+
+<p>Just for the clarity: Software supply chain security is in general very broad in scope and referred in different contexts including technical, procedural and regulatory aspects. In this blog, references to the software supply-chain (SSC) is limited to the scope for container based micro-services in DevSecOps. Also, the whole SBOM generation is not new for micro-services, there are few great tools and automations already available and used in practiced. In this blog, the sincere attempt is to take a step-back to reflect on current path.</p>
+
+<h2 id="what-is-bill-of-material">What is Bill-of-Material?</h2>
+
+<p>Think of the time when you go for the grocery shopping. When you picked any processed and packaged food item, you have no idea what ingredients went into that product. And you are allergic to certain food items, so you want to be absoutely 
+sure that food item does not include those allergic items. Another important thing is – during processing the ingredients gets transformed in shape and size and color and everything (grain to powder or fruit to cyrup, and likewise), so just by looking at the food in your hand, you can not figure out its ingredients (unless there is a litmus test for everything :)) Well, you are in luck, because FDA mandates <strong>Food Labeling</strong>
+for food and drug items. Now, you can view the ingredient list  on back of the food container and be assured about its <strong><em>bill-of-material</em></strong>.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/sbom-ingredients.png">
+    </div>
+</div>
+<div class="caption">
+    C'mon it's chocolate, do we really care about ingredients ?
+</div>
+
+<p>For software products (say a python package or a container image) that’s (well) exactly the same. As a consumer, when we are using any third-party software product, we need a way to verify its ingredients. And as a producer, we need a comprehensive tooling to generate that ingredient list while building those software products. And that list  would be a software bill-of-meterial or as commonly known as SBOM. In this blog, we will focus on producer part of the equation around tooling to generate SBOM for micro-services.</p>
+
+<h2 id="what-we-can-expect-from-sbom">What we can expect from SBOM?</h2>
+
+<p>Let’s first list desired properties for SBOM: (without claiming that this bill-of-desired-properties is complete :))</p>
+
+<ol>
+  <li>
+    <p><strong>Automated</strong>: 
+Well, ofcourse we can not ask (or not rely on) developer  to possibly know every software dependency (and their transitive dependencies) while they are writing code. SBOM generation should be automated process in the software build/delivery lifecycle.</p>
+  </li>
+  <li>
+    <p><strong>Complete</strong>
+We don’t want to miss ANY software dependency while we are discovering it.</p>
+  </li>
+  <li>
+    <p><strong>Accurate</strong>
+That’s the whole idea behind the SBOM, isn’t it ? For every software dependency we should be able to uniquely identify it’s source and version.</p>
+  </li>
+  <li>
+    <p><strong>Interoperable</strong>
+Right, we want SBOM in some standard format that can be validated/transferred/audited/parsed or in other words operated  independently.</p>
+  </li>
+  <li>
+    <p><strong>Verifiable</strong> 
+Need to make sure we can distribute SBOM securely and consumers can verify the integrity of the SBOM.</p>
+  </li>
+</ol>
+
+<h2 id="sbom-for-container-micro-services">SBOM for container micro-services?</h2>
+
+<p>For micro-services a deliverable software product is commonly a container image and is typically build through recipe defined in a <strong><em>Dockerfile</em></strong>. The Dockerfile allows developers to express different patterns and strategies for building their applications. To understand common practices, processes observed by developers and operations teams we surveyed open-source micro-service application repositories. From the set of all repositories on <strong><em>github.com</em></strong>, we filtered the ones containing atleast one Dockerfile and then ordered them by their popularity based on number of stars. We then scanned these repositories to learn and categorize various developer patterns. Survey results discussed below are based on top 100 Dockerfiles and top 100 python micro-services.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/python-install.png">
+    </div>
+</div>
+<div class="caption">
+    Survey: Developer patterns for specifying build recipes 
+</div>
+
+<p>We observed atleast 5 different patterns (1-5) developers are practicing to define and install just python dependencies for their applications, and 2 other patterns (6-7) to install third-party dependencies. As we can notice, there is a lack of standard practice in declaring the open-source dependencies that makes their provenance tracking even harder. At image level there is a single stage build pattern (A) wherein all dependencies are installed and delivered in the same image, or an use multi-stage build (B) to install dependencies in separate temporary image and copying them to final image (5). Also, these dependencies can be installed through standard package managers (1,2), or compiled manually (3,4). Furthermore, these dependencies can be managed in separate package manifests (1,4) or installed on-demand (2). In other cases, dependencies are baked into an image by copying pre-compiled binary from local build environment (6) or from well-known hosting repositories (7).</p>
+
+<p>Therefore, <strong>SBOM discovery limited to  discovering packages by quering package managers (pip list, apk list) is Insufficient as it does not cover bases for other modalities of dependencty inclusions. There  is a need for  a comprehensive  discovery engine that could account for all these modalities</strong>.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/sbom-place.png">
+    </div>
+</div>
+<div class="caption">
+    Micro-service app lifecycle (simplified:))
+</div>
+
+<p>Next, another important dimension to consider is – “When to compute SBOM?”. 
+As illustrated in a very simplied lifecycle of micro-service lifecycle above, SBOM can be  computed in the  DevSecOps pipelines <strong>before</strong> building the  image or from the image <strong>after</strong> it  is built. Let’s argue  about  both  these options.</p>
+
+<h4 id="sbom-in-devsecops-pipelines-before-build">SBOM in DevSecOps pipelines before build</h4>
+<p>At this stage, SBOM is computed from various build artifacts (including package manifests) available in the git repositories, like Dockerfile, requirements.txt, pom.xml etc. With access to all the source artifacts, we can perform deep provenance checks on all the dependencies, reason about “how it is installed”. For multi-stage builds, we can scan  every build stage independently for  completeness. Also, for statically-linked applications like <code class="language-plaintext highlighter-rouge">go</code> apps we can precisely understand  their  dependencies from their dependency manifests like go.mod.</p>
+
+<p>Although, this SBOM is still <strong>speculative</strong>, unless we can ensure every dependency in this SBOM is the one that gets installed during the  build. For instance, in the survey we mentioned above we noted in 91% Dockerfiles, base images were tagged with moving tags or partial versions. For open-source packages, over 1333 aggregated unique packages across all python applications, 25% of python packages were not tagged with any version and 40% packages were tagged with version constraints (minimum/maximum version range). In such cases, when software dependencies are not pinned precisely, their versions are resolved automatically at the build time. For instance, a base image specified with moving tag, like golang:1.14 will get resolved at build time to the latest available version from [1.14.9, 1.14.10]. Similarly, a package with no pinned version will resolve to the latest available version at the build time.</p>
+
+<h4 id="sbom-from-an-image-after-build">SBOM from an image after build</h4>
+<p>Well, then compute SBOM from the image. Well not  that simple :) Turning <code class="language-plaintext highlighter-rouge">pros</code> from above option to <code class="language-plaintext highlighter-rouge">cons</code> here – in case of multi-stage builds, the dependency inventory of the build stage(s) is not available. Also, for  micro-container images  containing a single statically-linked binary (go-app) its challenging to  discover  dependencies.</p>
+
+<p>So what do we do ? Maybe we can take following  approach:</p>
+
+<ol>
+  <li>Compute SBOM <strong><em>before</em></strong> image build in the DevSecOps pipelines</li>
+  <li>Lock/freeze all the  dependencies before build from the SBOM</li>
+  <li>Use this locked version during the  actual build</li>
+  <li>Generate SBOM on the  image  <strong><em>after</em></strong> build and verify  it is a complete  subset of  the  <code class="language-plaintext highlighter-rouge">previous</code> SBOM.</li>
+</ol>
+
+<p>In the next  blog, we will dive in more details on  this  approach. We will also discuss about (existing/emerging/desired) SBOM standards, existing set of tools and automations ready-to-use. Another important topic would be build vs deployment SBOM, because not every image that is build gets deployed.</p>
+
+<p>Please ping/email me with your feedback and suggestions.</p>
+
+
+  </article>
+
+  
+
+</div>
+
+    </div>
+
+    <!-- Footer -->
+
+    
+<footer class="fixed-bottom">
+  <div class="container mt-0">
+    © Copyright 2025 Shripad J. Nadgowda.
+    Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.
+
+    
+    
+  </div>
+</footer>
+
+
+
+  </body>
+
+  <!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+  <!-- Bootsrap & MDB scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.4.4/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+  
+<!-- Mansory & imagesLoaded -->
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<script defer src="/assets/js/mansory.js" type="text/javascript"></script>
+
+
+  
+
+
+<!-- Medium Zoom JS -->
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script src="/assets/js/zoom.js"></script>
+
+
+<!-- Load Common JS -->
+<script src="/assets/js/common.js"></script>
+
+  
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+<script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+
+  
+
+
+
+
+
+</html>
