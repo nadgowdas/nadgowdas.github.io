@@ -9,7 +9,7 @@ After the initial "wow" moment, there has been various concerns and questions be
 
 Anthropic recently released the a post "The need for transparency in Frontier AI"[1]. Few themes in this proposal includes:
 
-**Fare game** Taxing or regulating big players -- ones that are building the biggest frontier models and having huge compute capital. 
+**Fair game** Taxing or regulating big players -- ones that are building the biggest frontier models and having huge compute capital. 
 **Model benchmark** While building new models, create awareness amongst developers to consider possible implications and risks it might pose. Instead of having these evaluated subjectively, establish a common benchmark against which the models should be evaluated.
 **Model provenance** Every model should make an authentic provenance report (publically with possible redaction) available, on the training process and safety benchmarks it conducted.
 **Compliance** Creating "standard" and legal penaulty for non-adherance.
