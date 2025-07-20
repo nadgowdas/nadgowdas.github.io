@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Who wrote this ?
+title:  Building authentic internet
 date:   2025-07-19 7:39:16
 description: Authenticity of online contents
 ---
