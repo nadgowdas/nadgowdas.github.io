@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Building authentic internet
+title:  Building The Authentic Internet
 date:   2025-07-19 7:39:16
 description: Authenticity of online contents
 ---
