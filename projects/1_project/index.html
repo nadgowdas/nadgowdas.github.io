@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <meta http-equiv="refresh" content="3; url=https://nadgowdas.github.io/" />
+    
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   Shripad Nadgowda
 
 
-  | Page not found
+  | GitSecure
 
 </title>
 <meta name="description" content="Tech Preview: Ruminations around Container, Cloud and Security
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/404.html">
+<link rel="canonical" href="/projects/1_project/">
 
 
 <!-- Dark Mode -->
@@ -189,12 +189,42 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page not found</h1>
-    <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+    <h1 class="post-title">GitSecure</h1>
+    <p class="post-description">Code Risk Analyzer</p>
   </header>
 
   <article>
-    <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://nadgowdas.github.io/">here</a>.</p>
+    <div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+
+<img class="img-fluid rounded z-depth-1" src="/assets/resized/10-1400x933.jpg" srcset="    /assets/resized/10-480x320.jpg 480w,    /assets/resized/10-800x533.jpg 800w,    /assets/resized/10-1400x933.jpg 1400w,/ assets/img/10.jpg 3000w" title="example image">
+
+    </div>
+</div>
+<div class="caption">
+    All about DevSecOps
+</div>
+
+<p>I was part of the team at research when we built first-of its kind, security scanner for container images  and running containers. It is part of IBM Cloud as <a href="https://www.ibm.com/docs/en/SSBS6K_3.2.0/manage_cluster/vuln_advisor.html" target="_blank" rel="noopener noreferrer">Vulnerability Advisor</a> offering. Later as I was leading some security and compliance solution extensions, I realized the need for building these solutions close to the developer’s workflow. And at the same time DevSecOps was becoming the “thing”. So I started designing and building this solution called “GitSecure” in 2017. The objective was to embed security analytic into the developer workflow. GitSecure was the first instance, where I had implemented Docker CIS evaluations  from static deployment definitions for cloud-native workloads.</p>
+
+<p>This project is now available on IBM Cloud under <a href="https://www.ibm.com/cloud/blog/announcements/find-source-code-vulnerabilities-with-code-risk-analyzer" target="_blank" rel="noopener noreferrer">Code Risk Analyzer (CRA)</a> offering. This was one of the foundational compliance control for IBM Financial Cloud.</p>
+
+<p>GitSecure holds tremendous potential to improve security and compliance automations. I had described a framework around end-to-end automation in my blog Code2Container. The basic idea is simple – just like we have control loop in kubernetes wherein we describe our desire state for application through <code class="language-plaintext highlighter-rouge">spec</code> and controllers and then responsible to ensure that state is satisfied. We describe our compliance state as “desire-state” and build automated engine that monitors any discrepency (e.g. new vulnerability, runtime intrusion etc.) and drives concilor loop to fix the state (e.g. create a PR to upgrade vulnerable package).</p>
+
+<p>Our DevSecOps should also include “smart updates” that would notify users about newer versions of their dependencies.  ( yes, like existing solutions like Whitesource renovate). But, it should also give “reasons” for developers to upgrade their dependencies. Would it improve performance ? Does it fix any bugs ?</p>
+
+<h3 id="references">References:</h3>
+
+<p><a href="https://www.ibm.com/blogs/research/2020/11/secdevops-security-compliance/" target="_blank" rel="noopener noreferrer">Research Blog</a></p>
+
+<p><a href="ttps://www.infoworld.com/article/3588100/ibm-adds-code-risk-analyzer-to-cloud-based-cicd.html">CRA Infoworld </a></p>
+
+<p><a href="https://developer.ibm.com/articles/federation-of-security-controls/" target="_blank" rel="noopener noreferrer">Code2Container Article</a></p>
+
+<p><a href="https://anchor.fm/ibm-cloud-podcast/episodes/What-is-DevSecOps-and-Software-Supply-Chain-Security-e16sfdp" target="_blank" rel="noopener noreferrer">IBM Cloud Podcast on DevSecOps and SupplyChainSecurity</a></p>
+
 
   </article>
 

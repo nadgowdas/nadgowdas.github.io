@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <meta http-equiv="refresh" content="3; url=https://nadgowdas.github.io/" />
+    
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   Shripad Nadgowda
 
 
-  | Page not found
+  | Cargo
 
 </title>
 <meta name="description" content="Tech Preview: Ruminations around Container, Cloud and Security
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/404.html">
+<link rel="canonical" href="/projects/2_project/">
 
 
 <!-- Dark Mode -->
@@ -189,12 +189,34 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page not found</h1>
-    <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+    <h1 class="post-title">Cargo</h1>
+    <p class="post-description">Container Migratioon</p>
   </header>
 
   <article>
-    <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://nadgowdas.github.io/">here</a>.</p>
+    <div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+
+<img class="img-fluid rounded z-depth-1" src="/assets/resized/6-1400x933.jpg" srcset="    /assets/resized/6-480x320.jpg 480w,    /assets/resized/6-800x533.jpg 800w,    /assets/resized/6-1400x933.jpg 1400w,/ assets/img/6.jpg 3000w" title="example image">
+
+    </div>
+</div>
+<div class="caption">
+    Container Migration
+</div>
+
+<p>Before we start debate on “do we really need to migrate containers ?”, I want to point out this was one of the important business use-case in 2015-16. I had worked on VM migrations in cloud in the past. And when I heard about  this requirement for containers, I was really motivated to address it. There were couple of open-source solutions available at the time, most prominent  being the “flocker”, although it  was tied to the use of zfs. In “Cargo” I took file-system agnostic approach and built a solution for migrating “rootfs” of  containers. I  also tried using CRIU (it was in very early stage  that that time) for migrating in-memory state. When I wrote a research paper on this at IC2E’17, I received many inquiries by academic researchers who wanted  to  explore this  area further.</p>
+
+<p>Although,  today (2021/22) I would think container migration is not really  needed. Our “rootfs” should be immutable and easily replicated across nodes through “golden images”, mounted volumes should be plug-and-play  across nodes. And I am still not convinced we need to migrate in-memory  state. Yes, its important  for lot of stateful applications, but these days, applications have became so resilient that loss of this state during  migration should not be a big deal. Applications would be able to restore that state easily.</p>
+
+<h3 id="paper-abstract">Paper Abstract:</h3>
+<p>Due to the small memory footprint and fast startup times offerred by container virtualization, made ever more popular by the Docker platform, con- tainers are seeing rapid adoption as a foundational capability to build PaaS and SaaS clouds. For such container clouds, which are fundamentally different from VM clouds, various cloud management services need to be revisited. In this paper, we present our Voyager - just-in-time live container migration service, designed in accordance with the Open Container Ini- tiative (OCI) principles. Voyager is a novel filesystem- agnostic and vendor-agnostic migration service that provides consistent full-system migration.Voyager com- bines CRIU-based memory migration together with the data federation capabilities of union mounts to minimize migration downtime. With a union view of data between the source and target hosts, Voyager containers can resume operation instantly on the target host, while performing disk state transfer lazily in the background.</p>
+
+<h3 id="references-ieee-ic2e17-paper">References (IEEE IC2E’17 Paper)</h3>
+<p><a href="https://ieeexplore.ieee.org/abstract/document/7980161" target="_blank" rel="noopener noreferrer">Click Here</a></p>
+
 
   </article>
 
