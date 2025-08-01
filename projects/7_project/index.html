@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <meta http-equiv="refresh" content="3; url=https://nadgowdas.github.io/" />
+    
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   Shripad Nadgowda
 
 
-  | Page not found
+  | RunEscape
 
 </title>
 <meta name="description" content="Tech Preview: Ruminations around Container, Cloud and Security
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/404.html">
+<link rel="canonical" href="/projects/7_project/">
 
 
 <!-- Dark Mode -->
@@ -189,12 +189,38 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page not found</h1>
-    <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+    <h1 class="post-title">RunEscape</h1>
+    <p class="post-description">Dynamically injected utility functions</p>
   </header>
 
   <article>
-    <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://nadgowdas.github.io/">here</a>.</p>
+    <div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+
+<img class="img-fluid rounded z-depth-1" src="/assets/resized/5-1400x933.jpg" srcset="    /assets/resized/5-480x320.jpg 480w,    /assets/resized/5-800x533.jpg 800w,    /assets/resized/5-1400x933.jpg 1400w,/ assets/img/5.jpg 3000w" title="example image">
+
+    </div>
+</div>
+<div class="caption">
+    RunEscape: Dynamic Utility for Cloud
+</div>
+
+<p>As I got more into managing cloud-native applications on kubernetes, I started to realize our existing models of packaging a container image to make it look more like traditional VM image with all OS utility functions, with any required network/file management tools was very in-efficient. It made our container images bulky and exposed them to larger attack surface. At the same time, micro-containers, multi-stage build patterns started becoming popular and we started to brainstorm about this space with my colleagues, we came up with “runescape”. What if we could dynamically inject all utility functions to our container application at  runtime? We  would need sfew  tricks with namespace sharing, affinity placements and careful removal, but yes should be possible.</p>
+
+<p>Again, this  would be different than Istio sidecar, wherein the sidecar container is transparently added during the deployment and is parmanently attached to your application throughout the lifecycle. In RunEscape we are talking about scenarios, where you deploy your application first, and then at later point in time, say you want to run <code class="language-plaintext highlighter-rouge">top</code> inside the container – at that point you inject a sidecar containing only <code class="language-plaintext highlighter-rouge">top</code> utility into your application container, run it, capture the result and then remove the sidecar. Fancy huh ??</p>
+
+<p>This is also different than the approach described in this <a href="hhttps://engineering.salesforce.com/a-generic-sidecar-injector-for-kubernetes-c05eede1f6bb" target="_blank" rel="noopener noreferrer">post</a>. This approach is similar to the istio one, wherein the sidecar is attached throughout the  lifecycle of an application. We are talking about “on-demand” utility functions.</p>
+
+<p>If you want to learn more about “RunEscape”, I have listed some resources below:</p>
+
+<h3 id="paper-abstract">Paper Abstract:</h3>
+<p>Application runtimes are undergoing a fundamental transformation in the cloud, from general-purpose op- erating systems (OSes) in virtual machines (VMs) to lightweight, minimal OSes in microcontainers. On one hand, such transformation is helping reduce application footprint in the cloud to increase agility, density and to minimize attack surface. On the other hand it makes it challenging to implement system and application man- agement tasks. Inspired from the on-demand Function as a Service (FaaS) model in serverless computing, in RECap we are designing a cloud-native solution to deliver core systems and application management tasks through specially-managed Capsule containers. Capsule containers are dynamically attached to the running containers for the duration of their implemented function and are safely removed from application context afterwards. More generally, RECap framework allows us to design disaggregated on-demand managed service delivery for containers in the cloud. In this paper, we describe the motivation and the emerging opportunity for RECap in the cloud. We discuss its core design principles, performance, security and manageability trade-offs. We present current design of RECap for the Kubernetes platform.</p>
+
+<h3 id="paper-link">Paper Link:</h3>
+<p><a href="https://www.usenix.org/conference/hotcloud18/presentation/nadgowda" target="_blank" rel="noopener noreferrer">Click Here</a></p>
+
 
   </article>
 

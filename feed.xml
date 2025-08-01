@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://nadgowdas.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nadgowdas.github.io/" rel="alternate" type="text/html" /><updated>2025-08-01T01:53:59+00:00</updated><id>https://nadgowdas.github.io/feed.xml</id><title type="html">Shripad Nadgowda</title><subtitle>Tech Preview: Ruminations around Container, Cloud and Security
+</subtitle><entry><title type="html">What about Biased AI Agents ?</title><link href="https://nadgowdas.github.io/blog/2025/biased_agents/" rel="alternate" type="text/html" title="What about Biased AI Agents ?" /><published>2025-07-31T07:39:16+00:00</published><updated>2025-07-31T07:39:16+00:00</updated><id>https://nadgowdas.github.io/blog/2025/biased_agents</id><content type="html" xml:base="https://nadgowdas.github.io/blog/2025/biased_agents/"><![CDATA[<p>When I was a kid I always used tell my sister that our grandma was biased towards her, and I hated that. The same applies at work. We won’t like if our manager is biased towards certain individuals ( and if that’s not you :)). And that’s human virtue. But, then what about the biases exhibited by powerful frontier AI models ? I was recently listening to <a href="https://www.youtube.com/watch?v=OWROcr-YNxs" target="blank">Hard Fork podcast</a> on ‘AI Action Plan’ and was intrigued by the discussion around how do we tackle the problem of biasness in the AI models. For instance, the model  <a href="https://www.techradar.com/ai-platforms-assistants/chatgpt/salary-advice-from-ai-low-balls-women-and-minorities-report" target="blank">low-balling salary expectations</a> for women and minorities.</p>
+
+<p>If we consider, these AI models will keep exhibiting bias in some form or the other, then are those trustworthy to make decisions based on those ? AI Agents are exactly doing (or atleast they are positioned to do) that for us. To implement some automated task, these agents would consult the (potentially biased) model and based on the response make some decision and take action on your behalf. Will that make you a biased person ?</p>
+
+<p>For instance, would you trust AI agents to make the salary negotiations for you ? Or consider, you moved to a new city and you ask AI agents to find you a doctor and make an appointment, would it always prioritize the doctor with certain race or gender ?</p>
+
+<p>One argument could be that, biases are inherent to human nature, why they should’t be reflected in AI models ? IMO, as humans we try to be consicous and overcome biases when making important decisions. How do we ensure AI models follow that ?</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Discussing the impact of frontier model biasness on agents]]></summary></entry><entry><title type="html">Building The Authentic Internet</title><link href="https://nadgowdas.github.io/blog/2025/authentic_internet/" rel="alternate" type="text/html" title="Building The Authentic Internet" /><published>2025-07-19T07:39:16+00:00</published><updated>2025-07-19T07:39:16+00:00</updated><id>https://nadgowdas.github.io/blog/2025/authentic_internet</id><content type="html" xml:base="https://nadgowdas.github.io/blog/2025/authentic_internet/"><![CDATA[<p>In the world, where LLMs are spitting out letter, words, code and contents faster that we humans can even think, I am becoming suspicious of every online content I consume. When, I am reading a blog, listening to podcast, I find myself suspecting if it is creation of humans ? I am guilty of using LLMs for my day-to-day task as well. For instance, writing an email, updating my resume and many more. But, for those, if I am on the receiving end I am not expecting senders to be creative, its just a mode of information transfer and if AI can make is succinct and easy to read, it’s good for me.</p>
+
+<p>Same goes for code. There are so many coding agents, that can assist you or even own the code generation for you. Yes, on some level — as a developer I consider coding as an art and I’ve seen code from some of my peers that is just perfect to read and understand. But, just code in itself is not useful, what we care about is function that code can accomplish once it is executed. And if it functions what it says, I am good with it. So I don’t really care that much if that code is written by a AI agent.</p>
+
+<p>But, when it comes to creative writing — for instance, a news article, a blog, a book, a research paper, yes I tend to care if it indeed is written by humans. Because, those are the mediums in which I invest my time, through which I learn new things, gets inspired to do (or not do) certain things, change my behavior, takes life decisions. And I want those contents to be authentic - coming from my fellow sapiens.</p>
+
+<p>But, how do I know it’s authentic ? Unless someone send me a hand-written letter, it’s hard to get that assurance. What do we do for online content, which is the primary mode for me to consume them? Let’s keep aside two scenarios—humans can read from the AI and write them down char-by-char or we get robots who can mimic the human writing. I don’t have answers for those:(</p>
+
+<p>But, for other common cases, can we get some attestation from the online sources about authenticity of the written contents ? We already have techniques that can works for different online editors like HackMD, wherein, the javascript captures the keyboard events from the client’s machines and detects if there are Copy+Paste, or bulk insert events. Even detect on the client, if some LLM agent was actively used during writing of this content. We can have content editors provider this as value-added service, wherein, it can attest the content creation methods used by authors and make it available as “verified by humans” tag on the content. It’s a win-win for authors and readers.</p>
+
+<p>This simplified version certainly needs to be perfected to be used in practice, but, it’s just my personal food-for-thoughts. With some variations of such feature, whenever, I visit some online content, I can be assured to some degree about the authenticity of content creator and conent itself. Just like I can rely on Certificate Authority (CA) to attests the authenticity of the website I am visiting, a new Content Authority (CoA) can attest the authenticity of the contents on the web page. Well, in a  feedback-loop, it might even be used by AI-bots crawling the web to prioritize the original content for model training or can be specifically protected from such bots.</p>
+
+<p>“Attested - written by Human”</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Authenticity of online contents]]></summary></entry><entry><title type="html">Vibe Coding with Coding Agent</title><link href="https://nadgowdas.github.io/blog/2025/claude_code_1/" rel="alternate" type="text/html" title="Vibe Coding with Coding Agent" /><published>2025-07-15T07:39:16+00:00</published><updated>2025-07-15T07:39:16+00:00</updated><id>https://nadgowdas.github.io/blog/2025/claude_code_1</id><content type="html" xml:base="https://nadgowdas.github.io/blog/2025/claude_code_1/"><![CDATA[<p>Last couple of weeks, I came across multiple posts from my connections about their tryst with coding agents. Some tried Cursor, while others did Claude code, and so on.
+It was not my first time, interacting with coding agents. I had enabled CoPilot into my VSCode for more than 8 months and have been using it regularly. With CoPilot, it was helping me
+auto-complete some functions, add documentation and fix some errors. That was the extent to which I was using it. And I was pretty impressed with what it could do.</p>
+
+<p>Then, as I mentioned above, I got many updates on LinkedIn and X from people talking about “vibe coding”. Basically, interacting with the coding agents in natural language to accomplish your tasks or build the whole project. The promise is – you don’t need to be an expert (or in some cases, not even be knowledgeable) on the underlying programming languages. So i decided to give it a try. I got Claude Pro subscription, setup their code agent on my Mac and I was ready within 5 minutes.</p>
+
+<p>I checked few tutorials on it – they were mostly talking about intializing your existing project with claude, where claude can understand your complete project and then help you extend that with new features or help fix bugs. I was more interested in using it to build code from scratch. So instead of typical Web-app, I decided to try building a new Kubernetes Operator from scratch. I created new emptry project directory, intialize claude and enter prompt “I am looking to build a Kubernetes Operator to manage storage resources for Object Store (e.g. S3). You can use kubebuilder to scaffold the project and create a sample resource type with specs for size only. I want to see this working on my local workstation, so once ready, build and deploy it on kind.”. Pressed Enter&gt;</p>
+
+<p>Things that worked as I had expected were - it was able to discover if I have all the dependecies on my local workstation, like “kind”, “kubebuilder”, “docker” and stuff. It downloaded and install missing components. But, what amazed me was - how it adapted to things that failed without involving me. For instance, it failed to update “kube-builder” binary, because of conflicts, it read that error message, figure out the resolution path and executed it autonomously. There were multiple steps that failed during the process, and the agent was able to resolve those correctly. At the end, I had a new kind cluster with CRDs installed with sample. If I would have started without the agent, it would have taken me maybe an hour or two to get this stage, which in this case happened within 10 minutes. That’s a great productivity boost for me.</p>
+
+<p>I realized these agents are going to be great assistant for automating generalized tasks like bootstrapping the projects, building and running test-cases and more. IMO, we would still need experienced engineer to write the business logic for your projects, because that is something which is hard to generalize. Agents would certainly be helpful in assisting with code completions, function optimizations, but those would be supervised and on-demand.</p>
+
+<p>Next, I am going deep, trying to see exent to which they can be embedded into my daily development activities.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[First impression of Claude Code]]></summary></entry><entry><title type="html">Taming the Beast</title><link href="https://nadgowdas.github.io/blog/2025/regulating_ai/" rel="alternate" type="text/html" title="Taming the Beast" /><published>2025-07-15T07:39:16+00:00</published><updated>2025-07-15T07:39:16+00:00</updated><id>https://nadgowdas.github.io/blog/2025/regulating_ai</id><content type="html" xml:base="https://nadgowdas.github.io/blog/2025/regulating_ai/"><![CDATA[<p>After the initial “wow” moment, there has been various concerns and questions being raised around the “AI Systems”. They ranged from safety to ethicality to existential crisis and much more. There was even a memo circled around to regulate the progress ( or the arms race) of AI systems (needless to say it failed miserably). at the same time, there has been efforts to make AI safely and ethically useful. Let’s talk about 2 specific efforts to bring “transparency in AI training” and “fair use of conent for training”. Ideally, I would have loved these to be a single topic, but, unfortunately they are not.</p>
+
+<p>Anthropic recently released the a post “The need for transparency in Frontier AI”[1]. Few themes in this proposal includes:</p>
+
+<p><strong>Fair game</strong> Taxing or regulating big players – ones that are building the biggest frontier models and having huge compute capital. 
+<strong>Model benchmark</strong> While building new models, create awareness amongst developers to consider possible implications and risks it might pose. Instead of having these evaluated subjectively, establish a common benchmark against which the models should be evaluated.
+<strong>Model provenance</strong> Every model should make an authentic provenance report (publically with possible redaction) available, on the training process and safety benchmarks it conducted.
+<strong>Compliance</strong> Creating “standard” and legal penaulty for non-adherance.</p>
+
+<p>In nutshell, these are not new. In one form or the other, they are already exercise for food and drug safety. Nonetheless, these are essential.</p>
+
+<p>I noticed one thing missing and it is “data curation practice”. Besides, the electric power, these model training processes are extremely data hungry and resulting models are as good as the input data. And still, these transparency proposal lack any mention around regulation of data curation. It also came at the time when United States District Court ruled that training LLMs on copyrighted books constitutes fair use[4]. I found the argument even more distrubing. It says “[ it is] no different than it would be if they complained that training schoolchildren to write well would result in an explosion of competing works”.</p>
+
+<p>Then, I came across efforts by Cloudflare that would allow content creators on internet to restrict use of their content from ai-crawler-bots[2,3]. With simple configuration from user, Cloudflare can automate management of <code class="language-plaintext highlighter-rouge">robots.txt</code> file to limit ai-bots from visting certain sections of user’s content online world. This is really a smart step in the right direction. Although, it puts the onus of conent regulation on the content creator, instead of clients (ai players). I sincerely believe, this should be a shared-reposibility between two. And hope as/if we bring more transparency to the AI models, we include data provenance in their system cards.</p>
+
+<p>References:</p>
+
+<ol>
+  <li><a href="https://www.anthropic.com/news/the-need-for-transparency-in-frontier-ai">Anthropic: The need for transparency in Frontier Ai</a></li>
+  <li><a href="https://blog.cloudflare.com/control-content-use-for-ai-training/">Cloudflare: Control content use for AI training with Cloudflare</a></li>
+  <li><a href="https://blog.cloudflare.com/content-independence-day-no-ai-crawl-without-compensation/">Cloudflare: Content Independence Day</a></li>
+  <li><a href="https://www.deeplearning.ai/the-batch/issue-307/">Deeplearning: Weekly</a></li>
+</ol>]]></content><author><name></name></author><summary type="html"><![CDATA[AI Regulations - A step in a right direction]]></summary></entry><entry><title type="html">Orion - Gartner Validation</title><link href="https://nadgowdas.github.io/blog/2022/orion-gartner-update/" rel="alternate" type="text/html" title="Orion - Gartner Validation" /><published>2022-03-28T07:39:16+00:00</published><updated>2022-03-28T07:39:16+00:00</updated><id>https://nadgowdas.github.io/blog/2022/orion-gartner-update</id><content type="html" xml:base="https://nadgowdas.github.io/blog/2022/orion-gartner-update/"><![CDATA[<p>In the previous <a href="https://nadgowdas.github.io/blog/2021/orion-article/" target="blank">post</a> I talked about project <a href="https://github.com/tap8stry/orion" target="blank">Orion</a> and how critical it is to embed it into our CI pipeline to ensure SBOM completeness of our application builds. It was truly exciting to see the technical gap Orion is trying to address is being called explicitly in the research report by none other than Gatrner.</p>
+
+<p>On Feb. 14th 2022, Gartner published a report <a href="https://www.gartner.com/en/documents/4011501" target="blank">Innovation Insight for SBOMs</a>. This report summarizes requirements, challenges, risk and tools in the space of SBOM. In this report, they specifically called out the technical gap and risk in the existing SBOM generation tooling that could not discover software dependencies installed through non-package managers modes. And this is precisely the problem that project Orion is solving.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/gartner-orion-req.png" />
+    </div>
+</div>
+<div class="caption">
+    SBOM generation tooling technical risk
+</div>
+
+<p>This was a satisfying validation of the motivation when I started this project. And also, the fact that this project is being recognised amonst the SBOM management tools is gratifying.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/gartner-orion-list.png" />
+    </div>
+</div>
+<div class="caption">
+    List of open-source SBOM management tools
+</div>]]></content><author><name></name></author><summary type="html"><![CDATA[Software Supply Chain Security, SBOM]]></summary></entry><entry><title type="html">Orion - for SBOM Completeness</title><link href="https://nadgowdas.github.io/blog/2021/orion-article/" rel="alternate" type="text/html" title="Orion - for SBOM Completeness" /><published>2021-12-10T06:10:16+00:00</published><updated>2021-12-10T06:10:16+00:00</updated><id>https://nadgowdas.github.io/blog/2021/orion-article</id><content type="html" xml:base="https://nadgowdas.github.io/blog/2021/orion-article/"><![CDATA[<p>I had worked on designing and building one SBOM generation solution in DevSecOps pipeline. At the same time, I was building lots of micro-services and following different build patterns for them. And soon, I realize some gaps in the use of my  own tool for own micro-services for complete SBOM generation. And I found the same gap in the existing open-source SBOM generation tools. So I decided to work on this and that gave rise to “orion” - an SBOM generation for software dependencies not managed through package managers.</p>
+
+<p>The discussion of these  gaps and  some description of this tool is available  in TheNewStack article <a href="https://thenewstack.io/orion-go-beyond-package-manager-discovery-for-your-sbom/" target="blank">here</a>.</p>
+
+<p>And the project is available at <a href="https://github.com/tap8stry/orion" target="blank">tap8stry/orion</a></p>]]></content><author><name></name></author><summary type="html"><![CDATA[Software Supply Chain Security, SBOM]]></summary></entry><entry><title type="html">Kubecon 2021</title><link href="https://nadgowdas.github.io/blog/2021/kubecon-2021/" rel="alternate" type="text/html" title="Kubecon 2021" /><published>2021-10-12T06:10:16+00:00</published><updated>2021-10-12T06:10:16+00:00</updated><id>https://nadgowdas.github.io/blog/2021/kubecon-2021</id><content type="html" xml:base="https://nadgowdas.github.io/blog/2021/kubecon-2021/"><![CDATA[<p>This year (2021) I had opportunity to  present at Crossplane community Day at Kubecon’EU  and Cloud Native Security Day at KUbecon’  NA.</p>
+
+<p>At Crossplane Community Day, me and my colleague Paolo, talked about “role of DevSecOps” in crossplane. I strongly believe as we drive the adoption of crossplane for cloud infrastucture service provisioning and management, DevSecOps or “shift-left” security should be essential part of the solution.</p>
+
+<p>The slides for the talk is available  <a href="https://sched.co/icg0" target="blank">here</a> 
+And recording of the talk is available <a href="https://dev.tube/video/NHSsRjMsb1Y" target="blank">here</a></p>
+
+<p>Then, at CloudNative Security Con’ co-located with Kubecon’NA at Los Angeles, I had opportunity to present my current research focus around security of our CICD pipeline. This talk really helped me connect with so many wonderful people from the open-source community and drive the  discussion forward.</p>
+
+<p>The slides for the talk is available<a href="https://sched.co/mBmw" target="blank">here</a></p>
+
+<p>And recording of the talk is available  <a href="https://www.youtube.com/watch?v=cshICut7apQ" target="blank">here</a></p>]]></content><author><name></name></author><summary type="html"><![CDATA[Software Supply Chain Security, CICD Pipeline Security]]></summary></entry><entry><title type="html">IBM Cloud Podcast on “What is DevSecOps and Software Supply Chain Security ?”</title><link href="https://nadgowdas.github.io/blog/2021/ibm-cloud-podcast/" rel="alternate" type="text/html" title="IBM Cloud Podcast on “What is DevSecOps and Software Supply Chain Security ?”" /><published>2021-09-16T06:10:16+00:00</published><updated>2021-09-16T06:10:16+00:00</updated><id>https://nadgowdas.github.io/blog/2021/ibm-cloud-podcast</id><content type="html" xml:base="https://nadgowdas.github.io/blog/2021/ibm-cloud-podcast/"><![CDATA[<p>In this recent IBM Cloud  podcast, I had a  great time talking  to Dan around  the topic that is near and dear  to my heart, i.e. DevSecOps and Supply Chain Security. As I mentioned in this talk, Supply Chain Security is becoming important because our reliance on the open-source ecosystem is growing. But, in no-way I  am suggesting  we should avoid  use  of open-source software. OSS is must  to  drive innovation and to build our new technologies. But, open-source  does not means its “free”. We need to invest in the secure use of these softwares. There were various other topics we touched upon. If you are interested, the complete podcast is available for streaming from here –&gt; <a href="https://anchor.fm/ibm-cloud-podcast/episodes/What-is-DevSecOps-and-Software-Supply-Chain-Security-e16sfdp/a-a6fcgs0" target="blank">link</a></p>]]></content><author><name></name></author><summary type="html"><![CDATA[DevSecOps, Software Supply Chain Security]]></summary></entry><entry><title type="html">It’s time we start securing our CICD pipelines</title><link href="https://nadgowdas.github.io/blog/2021/pipeline-security/" rel="alternate" type="text/html" title="It’s time we start securing our CICD pipelines" /><published>2021-07-21T06:10:16+00:00</published><updated>2021-07-21T06:10:16+00:00</updated><id>https://nadgowdas.github.io/blog/2021/pipeline-security</id><content type="html" xml:base="https://nadgowdas.github.io/blog/2021/pipeline-security/"><![CDATA[<p><strong>TL;DR</strong> Automations through CICD pipelines have expedited security scanning and delivery of application to cloud. At the same time such automation functions are being made available <em>ready-to-use</em> in the open marketplaces like tekton catalog or Github Marketplace. Therefore, we  need to start thinking about securing the supply-chain for CICD pipelines itself.</p>
+
+<p>Before diving into the CICD pipeline security discussion, I want to talk about the way open-source ecosystem is influencing different aspects of software lifecycle management, from development, packaging, security scanning and much more. 
+Open source ecosystem is growing at an unprecedented pace.  At the same time, it is evolving in different granularities and dimensions. At the platform or infrastructure level we started  with linux to now docker and kubernetes. Personally I believe the major open source expansion is happening  at  application level. We  can roughly categorize this expansion at application level into categories shown below. (In  no way, I claim this list is exhaustive, but it is presented to drive  the  discussion  in  this blog.) These categories or modes of open-source contributions could be viewed as a chronological order of evolution, but there is no evidence to suggest  the later ones are replacing the older modes. In fact, I think there is a tremendous  growth  of contributions  in each  of these categories.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/oss-eval.jpg" />
+    </div>
+</div>
+<div class="caption">
+    Different currencies of open source contributions/consumptions
+</div>
+
+<p>Let’s first talk about these modes at application level for a moment. At the most  granular level, the open source exchange  happens by sharing the raw code/functions  from  git repositories, stackoverflow,  etc. Next, the <strong>code</strong>  can  be <strong>packaged</strong>, compiled together to be made available as a library or an executable binary. Libraries can be downloaded  from standard package registries like pypi, npm, maven or from OS distros like debian, alpine. While binaries are typically available through release bundles or directly from some object stores (<em>remember how you installed <strong>kubectl</strong> CLI  last time</em>).</p>
+
+<p>Then a big nexus event occurred , i.e. <strong>containers</strong>. (yes, about <em>nexus event</em> – <a href="https://www.denofgeek.com/tv/loki-what-is-a-nexus-event/" target="blank">according to Marvel’s</a> fantasy universe, nexus event is a significant event that causes a branch to break off from the Sacred Timeline to create new realities) Through container images, we started distributing applications with base OS and language  runtimes and all required package dependencies.  If you need a database, you simply run</p>
+
+<p><code class="language-plaintext highlighter-rouge">docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=don't-tell -d mysql</code>.</p>
+
+<p>But, yes you still had to be responsible for managing lifecycle (scaling/migration) of these applications. Then, with <strong>operators</strong> the onus  of managing lifecycle for applications is switched from  user to open-source operator providers.</p>
+
+<p>Containers allowed breaking monolithic applications and business logic into modular components that can be developed independently and quickly. Such an accelerated development pattern then required a high velocity path from code to container that gave rise to innovation and automation in CICD pipelines. CICD pipelines aim to facilitate expedited testing, security scanning and delivery of applications to cloud through automation. As a result, we are witnessing a new open-source ecosystem around CICD pipelines.</p>
+
+<p>More specifically, I will talk about <em>two</em> CICD technologies I am intimately familiar with, viz. “Tekton” and “GitHub Actions”. Both these technologies have a growing open-source marketplace where common utility functions (like git-clone, lint-scan..) as well as specialized security and compliance functions (like static-scan, vulnerability-scan..) are made available. Tekton, for instance has <a href="https://github.com/tektoncd/catalog" target="blank">tektoncd/catalog</a> where more than 50 <em>tasks</em> are available. While GitHub has <a href="https://github.com/marketplace" target="blank">Marketplace</a>, where more than 800 <em>github actions</em> are available just for code quality checks.</p>
+
+<p>While consumption of open source software allows faster development, it also puts our CICD pipelines at risk from malicious penetration in the supply chain. For example, in the pipeline shown below, individual tasks are authored by different open source vendors. The <em>code-clone</em> task clones given repository and initializes shared workspace for remaining security and compliance tasks. In this case, if the <em>code-clone</em> is compromised in performing its intended desired function, i.e. it adds/updates/removes some code artifacts after cloning the original code, then the analytic performed by remaining tasks is automatically compromised.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/tekton-pipeline-risk.png" />
+    </div>
+</div>
+<div class="caption">
+    Sample DevSecOps pipeline with tekton for code scanning
+</div>
+
+<p>Thus, as we are building CICD DevSecOps pipelines for securing application scanning and delivery, our pipelines <strong>as-is</strong> can not be the <em>root-of-trust</em>. In other words, we need to make sure our CICD pipelines are “secure” at the composition to begin with. We are (somewhat) familiar to how we (think we) secure <em>packages</em> and <em>container images</em> by generating SBOM, scanning all dependencies for vulnerabilities, auditing them for licenses, and more. In the wake of recent supply chain attacks, we realized the breadth of the scanning we do is not enough, but let’s leave it for an another blog. For CICD what it means to start securing pipelines ?</p>
+
+<p>For brevity, let’s call the <em>tekton tasks</em> or <em>github actions</em> as CICD <strong>functions</strong> and the compositions in which they are used like <em>tekton pipeline</em> or <em>github workflow</em> as simply <strong>pipelines</strong>. Function definitions (tekton-task.yaml or action.yaml) typically has <em>two</em> sections, (a) configuration and (b)execution. Configuration section contains metadata like name, input/output arguments, default values for input arguments, declaration of shared resources and like. While execution section declares a script/binary or an image and an actual command to run. 
+Pipeline definition, on the other hand declares order in which these functions can be invoked and pass-on different configuration values to these functions. When we are talking about securing a pipeline, we can start considering following dimensions:</p>
+
+<ol>
+  <li>
+    <p><strong>Secure Pipeline Layout</strong>: We need to secure the <em>order</em> of execution for functions in the pipeline. We also need to ensure correct Read/Write access to the shared resources for functions.</p>
+  </li>
+  <li>
+    <p><strong>Secure the data flow in the pipeline</strong>: As functions execute inside a pipeline, they typically produce some new artifacts. For instance, <code class="language-plaintext highlighter-rouge">git-clone</code> task would produce a source code clone directory or <code class="language-plaintext highlighter-rouge">vulnerability-scanner</code> would produce a JSON report about discovered vulnerabilities. These artifacts could be input to another function, like vulnerability report can be consumed by <code class="language-plaintext highlighter-rouge">jira-msg</code> to open an issue or <code class="language-plaintext highlighter-rouge">slack-msg</code> to send a message. We need to ensure the data flow within a pipeline is secure as well.</p>
+  </li>
+  <li>
+    <p><strong>Secure Task configurations</strong>: We need to secure integrity of task configurations, such that any changes to the default values, input/output parameters can be signed/verified to be coming from trusted sources.</p>
+  </li>
+  <li>
+    <p><strong>Secure Task Execution Commands</strong>: This is one critical requirement. We need to ensure the execution base (binary/image/script) is coming from trusted source, has no vulnerabilities and <code class="language-plaintext highlighter-rouge">run command</code> has not been tempered by un-authorized sources.</p>
+  </li>
+  <li>
+    <p><strong>Secure innovation of pipeline</strong>: For better usability, pipelines typically offer multiple modes for triggering an execution, for instance manual trigger (<code class="language-plaintext highlighter-rouge">kubectl -f apply pipelinerun.yaml/taskrun.yaml</code>), timed trigger (cronjob scheduled) or event tigger (on pull_request or push from git). So we need a way to verify and authorize the source of the trigger before executing a pipeline.</p>
+  </li>
+  <li>
+    <p><strong>Admission gate for execution</strong> : It never hurts to be double sure:) While we can perform these pipeline security checks by statically scanning the pipeline definitions, it always helps to enfore them at the runtime. So when an authorized event triggers execution of the pipeline, we need to verify pipeline/task/resources/parameters before instantiating the pipeline.</p>
+  </li>
+</ol>
+
+<p>Then once your pipeline starts executing, there is some great work going-on with <a href="https://github.com/tektoncd/chains/" target="blank">tektoncd/chains</a> that monitors task executions in the cluster, sign and attest execution state as well as produced artifacts.</p>
+
+<p>Ok, so far we discuss a lot about <em>Why</em> and <em>What</em> about pipeline security theoretically, that leaves us to the practical aspect of <em>How</em>? In the next blog, we will dig deep in evaluating existing and emerging technologies to our need and try to build the right solution.</p>
+
+<p>Again, for inputs or feedback please feel free to reach out to me on Twitter/Github/Email.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Software Supply Chain Security, CICD Pipeline Security]]></summary></entry><entry><title type="html">Are you ready with your SBOM ? Think again !</title><link href="https://nadgowdas.github.io/blog/2021/trust-sbom/" rel="alternate" type="text/html" title="Are you ready with your SBOM ? Think again !" /><published>2021-06-23T22:10:16+00:00</published><updated>2021-06-23T22:10:16+00:00</updated><id>https://nadgowdas.github.io/blog/2021/trust-sbom</id><content type="html" xml:base="https://nadgowdas.github.io/blog/2021/trust-sbom/"><![CDATA[<p>Security and Integrity of software supply chain is one of the fundamental requirements in the overall assessment of cybersecurity. The first step in securing software supply chain is the ability to provide complete, accurate and audit-able record of every dependency baked into building a deliverable software product or as generally referred to as Software Bill-of-Material (SBOM). Well, it also has an <a href="https://www.whitehouse.gov/briefing-room/presidential-actions/2021/05/12/executive-order-on-improving-the-nations-cybersecurity/" target="blank">executive</a>  status now!</p>
+
+<p>Just for the clarity: Software supply chain security is in general very broad in scope and referred in different contexts including technical, procedural and regulatory aspects. In this blog, references to the software supply-chain (SSC) is limited to the scope for container based micro-services in DevSecOps. Also, the whole SBOM generation is not new for micro-services, there are few great tools and automations already available and used in practiced. In this blog, the sincere attempt is to take a step-back to reflect on current path.</p>
+
+<h2 id="what-is-bill-of-material">What is Bill-of-Material?</h2>
+
+<p>Think of the time when you go for the grocery shopping. When you picked any processed and packaged food item, you have no idea what ingredients went into that product. And you are allergic to certain food items, so you want to be absoutely 
+sure that food item does not include those allergic items. Another important thing is – during processing the ingredients gets transformed in shape and size and color and everything (grain to powder or fruit to cyrup, and likewise), so just by looking at the food in your hand, you can not figure out its ingredients (unless there is a litmus test for everything :)) Well, you are in luck, because FDA mandates <strong>Food Labeling</strong>
+for food and drug items. Now, you can view the ingredient list  on back of the food container and be assured about its <strong><em>bill-of-material</em></strong>.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/sbom-ingredients.png" />
+    </div>
+</div>
+<div class="caption">
+    C'mon it's chocolate, do we really care about ingredients ?
+</div>
+
+<p>For software products (say a python package or a container image) that’s (well) exactly the same. As a consumer, when we are using any third-party software product, we need a way to verify its ingredients. And as a producer, we need a comprehensive tooling to generate that ingredient list while building those software products. And that list  would be a software bill-of-meterial or as commonly known as SBOM. In this blog, we will focus on producer part of the equation around tooling to generate SBOM for micro-services.</p>
+
+<h2 id="what-we-can-expect-from-sbom">What we can expect from SBOM?</h2>
+
+<p>Let’s first list desired properties for SBOM: (without claiming that this bill-of-desired-properties is complete :))</p>
+
+<ol>
+  <li>
+    <p><strong>Automated</strong>: 
+Well, ofcourse we can not ask (or not rely on) developer  to possibly know every software dependency (and their transitive dependencies) while they are writing code. SBOM generation should be automated process in the software build/delivery lifecycle.</p>
+  </li>
+  <li>
+    <p><strong>Complete</strong>
+We don’t want to miss ANY software dependency while we are discovering it.</p>
+  </li>
+  <li>
+    <p><strong>Accurate</strong>
+That’s the whole idea behind the SBOM, isn’t it ? For every software dependency we should be able to uniquely identify it’s source and version.</p>
+  </li>
+  <li>
+    <p><strong>Interoperable</strong>
+Right, we want SBOM in some standard format that can be validated/transferred/audited/parsed or in other words operated  independently.</p>
+  </li>
+  <li>
+    <p><strong>Verifiable</strong> 
+Need to make sure we can distribute SBOM securely and consumers can verify the integrity of the SBOM.</p>
+  </li>
+</ol>
+
+<h2 id="sbom-for-container-micro-services">SBOM for container micro-services?</h2>
+
+<p>For micro-services a deliverable software product is commonly a container image and is typically build through recipe defined in a <strong><em>Dockerfile</em></strong>. The Dockerfile allows developers to express different patterns and strategies for building their applications. To understand common practices, processes observed by developers and operations teams we surveyed open-source micro-service application repositories. From the set of all repositories on <strong><em>github.com</em></strong>, we filtered the ones containing atleast one Dockerfile and then ordered them by their popularity based on number of stars. We then scanned these repositories to learn and categorize various developer patterns. Survey results discussed below are based on top 100 Dockerfiles and top 100 python micro-services.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/python-install.png" />
+    </div>
+</div>
+<div class="caption">
+    Survey: Developer patterns for specifying build recipes 
+</div>
+
+<p>We observed atleast 5 different patterns (1-5) developers are practicing to define and install just python dependencies for their applications, and 2 other patterns (6-7) to install third-party dependencies. As we can notice, there is a lack of standard practice in declaring the open-source dependencies that makes their provenance tracking even harder. At image level there is a single stage build pattern (A) wherein all dependencies are installed and delivered in the same image, or an use multi-stage build (B) to install dependencies in separate temporary image and copying them to final image (5). Also, these dependencies can be installed through standard package managers (1,2), or compiled manually (3,4). Furthermore, these dependencies can be managed in separate package manifests (1,4) or installed on-demand (2). In other cases, dependencies are baked into an image by copying pre-compiled binary from local build environment (6) or from well-known hosting repositories (7).</p>
+
+<p>Therefore, <strong>SBOM discovery limited to  discovering packages by quering package managers (pip list, apk list) is Insufficient as it does not cover bases for other modalities of dependencty inclusions. There  is a need for  a comprehensive  discovery engine that could account for all these modalities</strong>.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <img class="img-fluid rounded z-depth-1" src="/assets/img/sbom-place.png" />
+    </div>
+</div>
+<div class="caption">
+    Micro-service app lifecycle (simplified:))
+</div>
+
+<p>Next, another important dimension to consider is – “When to compute SBOM?”. 
+As illustrated in a very simplied lifecycle of micro-service lifecycle above, SBOM can be  computed in the  DevSecOps pipelines <strong>before</strong> building the  image or from the image <strong>after</strong> it  is built. Let’s argue  about  both  these options.</p>
+
+<h4 id="sbom-in-devsecops-pipelines-before-build">SBOM in DevSecOps pipelines before build</h4>
+<p>At this stage, SBOM is computed from various build artifacts (including package manifests) available in the git repositories, like Dockerfile, requirements.txt, pom.xml etc. With access to all the source artifacts, we can perform deep provenance checks on all the dependencies, reason about “how it is installed”. For multi-stage builds, we can scan  every build stage independently for  completeness. Also, for statically-linked applications like <code class="language-plaintext highlighter-rouge">go</code> apps we can precisely understand  their  dependencies from their dependency manifests like go.mod.</p>
+
+<p>Although, this SBOM is still <strong>speculative</strong>, unless we can ensure every dependency in this SBOM is the one that gets installed during the  build. For instance, in the survey we mentioned above we noted in 91% Dockerfiles, base images were tagged with moving tags or partial versions. For open-source packages, over 1333 aggregated unique packages across all python applications, 25% of python packages were not tagged with any version and 40% packages were tagged with version constraints (minimum/maximum version range). In such cases, when software dependencies are not pinned precisely, their versions are resolved automatically at the build time. For instance, a base image specified with moving tag, like golang:1.14 will get resolved at build time to the latest available version from [1.14.9, 1.14.10]. Similarly, a package with no pinned version will resolve to the latest available version at the build time.</p>
+
+<h4 id="sbom-from-an-image-after-build">SBOM from an image after build</h4>
+<p>Well, then compute SBOM from the image. Well not  that simple :) Turning <code class="language-plaintext highlighter-rouge">pros</code> from above option to <code class="language-plaintext highlighter-rouge">cons</code> here – in case of multi-stage builds, the dependency inventory of the build stage(s) is not available. Also, for  micro-container images  containing a single statically-linked binary (go-app) its challenging to  discover  dependencies.</p>
+
+<p>So what do we do ? Maybe we can take following  approach:</p>
+
+<ol>
+  <li>Compute SBOM <strong><em>before</em></strong> image build in the DevSecOps pipelines</li>
+  <li>Lock/freeze all the  dependencies before build from the SBOM</li>
+  <li>Use this locked version during the  actual build</li>
+  <li>Generate SBOM on the  image  <strong><em>after</em></strong> build and verify  it is a complete  subset of  the  <code class="language-plaintext highlighter-rouge">previous</code> SBOM.</li>
+</ol>
+
+<p>In the next  blog, we will dive in more details on  this  approach. We will also discuss about (existing/emerging/desired) SBOM standards, existing set of tools and automations ready-to-use. Another important topic would be build vs deployment SBOM, because not every image that is build gets deployed.</p>
+
+<p>Please ping/email me with your feedback and suggestions.</p>]]></content><author><name></name></author><summary type="html"><![CDATA[Software Bill-of-Material]]></summary></entry></feed>

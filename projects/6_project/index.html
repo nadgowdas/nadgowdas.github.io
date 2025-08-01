@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <meta http-equiv="refresh" content="3; url=https://nadgowdas.github.io/" />
+    
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   Shripad Nadgowda
 
 
-  | Page not found
+  | Paracloud
 
 </title>
 <meta name="description" content="Tech Preview: Ruminations around Container, Cloud and Security
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/404.html">
+<link rel="canonical" href="/projects/6_project/">
 
 
 <!-- Dark Mode -->
@@ -189,12 +189,25 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page not found</h1>
-    <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+    <h1 class="post-title">Paracloud</h1>
+    <p class="post-description">Making  your applications aware of cloud</p>
   </header>
 
   <article>
-    <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://nadgowdas.github.io/">here</a>.</p>
+    <p>As containers became popular around 2015-16, I got opportunity to be on the front and build cloud platform for containers. And then, started working on building various micro-service applications on that cloud. Containers obviously had a major attractions that we didn’t had to change our applications. THe novel container image packaging with Docker, allowed us to easily port existing applications to containers.</p>
+
+<p>As I was building more and more of these applications, I thought how much (as a user) do I desire to port my application “as-is” without any refactoring ? And then, through some discussion with my colleagues, we came up with few use-cases where it would make more sense to  make our applications aware of the underlying cloud infrastructure. And then came up with this idea of “Paracloud”, in which we change the packaging/runtime of our applications to make them aware that they are running on cloud and see if that can assist with routine cloud management functions like load-balacing/monitoring/migration. We had submitted a short paper on this idea at  <a href="https://www.usenix.org/conference/hotcloud17/program/presentation/nadgowda" target="_blank" rel="noopener noreferrer">Usenix HotCloud’17</a> workshop.</p>
+
+<p>Nowadays, kubernetes “operators” have made this a common design patterns. We are building more and more specialized operators by embedding application specific knowledge into them to manage their lifecycle.</p>
+
+<p>If you want to learn more about “Paracloud”, I have listed some resources below:</p>
+
+<h3 id="paper-abstract">Paper Abstract:</h3>
+<p>Applications have commonly been oblivious to their cloud runtimes. This is primarily because they started their journey in IaaS clouds, running on a guestOS inside VMs. Then to increase performance, many guestOSes have been paravirtualized making them virtualization aware, so that they can bypass some of the virtualization layers, as in virtio. This approach still kept applications unmodified. Recently, we are witnessing a rapid adoption of containers due to their packaging benefits, high density, fast start-up and low overhead. Applications are increasingly being on-boarded to PaaS clouds in the form of application containers or appc, where they are run directly on a cloud substrate like Kubernetes or Docker Swarm. This shift in deployment practices present an opportunity to make applications aware of their cloud. In this paper, we present Paracloud framework for application containers and discuss the Paracloud interface (PaCI) for three cloud operations namely migration, auto-scaling and load-balancing.</p>
+
+<h3 id="paper-link">Paper Link:</h3>
+<p><a href="https://www.usenix.org/conference/hotcloud17/program/presentation/nadgowda" target="_blank" rel="noopener noreferrer">Click Here</a></p>
+
 
   </article>
 

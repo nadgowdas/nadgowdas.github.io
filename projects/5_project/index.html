@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <meta http-equiv="refresh" content="3; url=https://nadgowdas.github.io/" />
+    
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   Shripad Nadgowda
 
 
-  | Page not found
+  | columbus
 
 </title>
 <meta name="description" content="Tech Preview: Ruminations around Container, Cloud and Security
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎲</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="/404.html">
+<link rel="canonical" href="/projects/5_project/">
 
 
 <!-- Dark Mode -->
@@ -189,12 +189,31 @@
       <div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page not found</h1>
-    <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
+    <h1 class="post-title">columbus</h1>
+    <p class="post-description">File based software discovery</p>
   </header>
 
   <article>
-    <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://nadgowdas.github.io/">here</a>.</p>
+    <div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        
+
+
+<img class="img-fluid rounded z-depth-1" src="/assets/resized/5-1400x933.jpg" srcset="    /assets/resized/5-480x320.jpg 480w,    /assets/resized/5-800x533.jpg 800w,    /assets/resized/5-1400x933.jpg 1400w,/ assets/img/5.jpg 3000w" title="example image">
+
+    </div>
+</div>
+<div class="caption">
+    Software Discovery
+</div>
+
+<p>This was one project that I started purely based on some intuition – when developers builds their software they tend to organize various files/binaries in some common patterns. For instance, they would start name of each compiled binary to start with the name of the software itself. For instance, all binaries for <code class="language-plaintext highlighter-rouge">mysql</code> application are named <code class="language-plaintext highlighter-rouge">mysqld</code>, <code class="language-plaintext highlighter-rouge">mysqladmin</code>, <code class="language-plaintext highlighter-rouge">mysqldump</code> ..? Coincidence ? In 2016-17, I went ahead and built a software discovery solution based on this intuition. And then, when we ran experiments with it against then available official public images from DockerHub (~150 of them), we were surprised to see &gt;90% accurancy. Of-course, this is not a reliable method for discovery discovery as it can easily be tricked by changing naming patterns. But, it can be used as a starting point for more sophisticated discovery techniques. And that’s what  we did. After initial evaluation, we collaborated with researchers/students from Boston University and built a more advanced ML model on top of this.</p>
+
+<h3 id="paper-abstract">Paper Abstract:</h3>
+<p>Software discovery is a key management function to ensure that systems are free of vulnerabilities, comply with licensing requirements, and support advanced search for systems containing given software. Today, software is predominantly discovered through querying package management tools, or using rules that check for file metadata or contents. These approaches are inadequate as not every software is installed through package managers, and agile development practices lead to frequent de- ployment of software. Other approaches to software discovery use machine learning methods requiring training phase, or require maintaining knowledge bases. Columbus uses the knowledge of the software packaging practices that evolved over time, and uses the information embedded in the file system impression created by a software package to discover it. Columbus is able to discover software in 92% of all official Docker images. Further, Columbus can be used in problem diagnosis and drift detection situations to compare two different systems, or to determine the evolution of a system overtime.</p>
+
+<h3 id="paper-link">Paper Link:</h3>
+<p><a href="https://ieeexplore.ieee.org/document/7923788" target="_blank" rel="noopener noreferrer">Click Here</a></p>
 
   </article>
 
