@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Understanding limitations of LLMs
-date:   2025-09-11 7:39:16
+date:   2025-09-11 1:00:16
 description: Limitations of LLMs for general intelligence
 ---
 
