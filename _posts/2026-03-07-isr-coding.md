@@ -8,7 +8,7 @@ description: Part 1 - Navigating the agentic world
 This is not one of those posts that tries to convince you how bad coding agents are. I am very much pro-AI and specifically for coding agents - they are here to stay. I've been maxing my tokens with Vibe Coding every day.
 But, as I have been doing this, there have been some patterns I've experienced, that I wanted to share here.
 
-As always, let's first reminisce with some melancholy music to the good old days :) I remember staying glued to my computer screen all day to implement a simple streaming JSON parser because my file was too big. At the end of the day, I used to feel I've maxed out tokens from my personal organic neutral network. Even if in the schema of the whole project this would be a small factor, I would feel productive that day.
+As always, let's first reminisce with some melancholy music to the good old days :) I remember staying glued to my computer screen all day to implement a simple streaming JSON parser because my file was too big. At the end of the day, I used to feel I've maxed out tokens from my personal organic neural network. Even if in the schema of the whole project this would be a small factor, I would feel productive that day.
 
 These days with agents, I am feeling that I am serving a role of ISR (Interrupt Service Routine) to these agents. I think hard and come up with a prompt, then I wait, and wait and wait for the agent to come back to me with a plan, then I review the plan and give it a go. Then, I wait, and wait, and wait for it to finish the task. Then, I decide to try it out and iterate over it while, yes, waiting.
 
