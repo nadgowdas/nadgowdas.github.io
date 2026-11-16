@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Shripad Nadgowda | confuse</title>
+<meta name="description" content="Container Filesystem in Userspace">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://nadgowdas.github.io/projects/3_project/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script src="/assets/js/theme.js"></script>
+<script defer src="/assets/js/dark_mode.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/modern.css">
+
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header site-header--sticky">
+  <div class="container header-inner">
+    <a class="site-brand" href="/">Shripad Nadgowda</a>
+    <div class="header-controls">
+      <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">
+        <span>Menu</span>
+        <svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+      
+      <button id="light-toggle" class="theme-toggle" type="button" aria-label="Use dark theme" aria-pressed="false" title="Use dark theme">
+        <svg class="theme-moon" width="19" height="19" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.4 13.1A8.5 8.5 0 0 1 10.9 3.6a8.5 8.5 0 1 0 9.5 9.5Z"></path></svg>
+        <svg class="theme-sun" width="19" height="19" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"></path></svg>
+      </button>
+      
+    </div>
+    <nav id="site-navigation" class="site-navigation" aria-label="Primary navigation">
+      <ul>
+        
+          
+          
+          <li><a href="/blog/">Writing</a></li>
+        
+          
+          
+          <li><a href="/publications/">Research</a></li>
+        
+          
+          
+          <li><a href="/talks/">Talks</a></li>
+        
+          
+          
+          <li><a href="/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <main id="main-content" class="container site-content" tabindex="-1">
+      <div class="page">
+  <header class="post-header"><h1 class="post-title">confuse</h1>
+<p class="post-description">Container Filesystem in Userspace</p></header>
+  <article class="page-content"><div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img src="/assets/img/thumbs/4.jpg" alt="confuse" class="img-fluid rounded" loading="lazy">
+    </div>
+</div>
+<div class="caption">
+    Reconstructing container filesystems in userspace.
+</div>
+
+<p>I was really fascinated by the open-source project started by my colleagues around out-of-band container introspection. It is called <a href="https://github.com/cloudviz/agentless-system-crawler" target="_blank" rel="noopener noreferrer">agentless-system-crawler</a>. This tool allowed us to very efficiently capture the state of running container in a JSON object, which then can be transferred to dedicated  analytic platform for security analytics. And this solution was deployed on IBM Cloud  for image and container scanning. Although, it required  us to build “a new” analytic solution that would first parse that JSON object.</p>
+
+<p>I had some experience working with FUSE filesystem and I started wondering can we re-construct the container state from that  JSON once and then use it to run existing security analytic tools  un-modified ? And as it turned out, it was indeed a very practical solution. It was deployed  and used in  IBM Cloud  Private solution to run existing CIS benchmark tools de-coupled from the actual cluster.</p>
+
+<h3 id="paper-abstract">Paper Abstract:</h3>
+<p>Emerging security solutions for cloud commonly operate in two phases, data collection and analytics. Data collection phase provides visibility into cloud resources (images, containers, VMs, etc.) and analytics derives insights built on data. Analytics phase is com- monly decoupled from data collection and cloud resources as a separate, scalable pipeline. This enables cloud-scale operation via separation of concerns and overheads. Analytics focus on deriv- ing high-value insights from data, and data collection focuses on efficient and minimally-intrusive inspection and introspection tech- niques. However, this model breaks traditional security solutions, such as endpoint managers, malware and compliance checkers, that are designed to run locally inside the systems they are securing. The common cloud strategy to address this problem has been to rewrite existing solutions to “work from data” instead of “working inside the system”. This requires huge amount of resources and effort, and has fueled a slew of new “cloud-native security” solutions in the field.
+In this paper we approach this problem from a different angle. In- stead of rewriting security solutions to work from data, we explore how to reuse existing security solutions as black-box analytics in the cloud. We present DéjàVu, a framework that makes data acces- sible to traditional software by mimicking a system veneer over the data. We achieve this by re-building a standard native POSIX system interface over the data. We enable traditional security ap- plications to run unmodified in a black-box fashion. We validate our framework with state of the art third party security solutions and demonstrate that they can be operated with modest overhead.</p>
+
+<h3 id="paper-link-poster-at-acm-sympoisum-on-cloud--computing-2018">Paper Link (Poster at ACM Sympoisum on Cloud  Computing 2018):</h3>
+<p><a href="https://dl.acm.org/doi/abs/10.1145/3267809.3275470" target="_blank" rel="noopener noreferrer">Click Here</a></p>
+
+<h3 id="paper-link-acm-middleware-2018">Paper Link (ACM Middleware 2018):</h3>
+<p><a href="https://dl.acm.org/doi/10.1145/3284028.3284031" target="_blank" rel="noopener noreferrer">Click Here</a></p>
+
+<h3 id="paper-link-workshop-on-container-technologies-middleware-2020">Paper Link (Workshop on Container Technologies, Middleware 2020):</h3>
+<p><a href="https://dl.acm.org/doi/10.1145/3429885.3429961" target="_blank" rel="noopener noreferrer">Click Here</a></p>
+
+</article>
+</div>
+
+    </main>
+    <footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+<a class="footer-name" href="/">Shripad Nadgowda</a><p>© 2026 · Built with <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> and hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+</p>
+</div>
+    <nav aria-label="Footer navigation"><a href="/projects/">Projects</a><a href="/feed.xml">RSS</a></nav>
+  </div>
+</footer>
+
+    <script defer src="/assets/js/common.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script defer src="/assets/js/zoom.js"></script>
+
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+
+
+    
+
+
+
+
+  </body>
+</html>

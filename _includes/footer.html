@@ -1,6 +1,0 @@
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div><a class="footer-name" href="{{ '/' | relative_url }}">{{ site.first_name }} {{ site.last_name }}</a><p>&copy; {{ site.time | date: '%Y' }} · {{ site.footer_text }}{% if site.last_updated %} Updated {{ site.time | date: '%B %-d, %Y' }}.{% endif %}</p></div>
-    <nav aria-label="Footer navigation"><a href="{{ '/projects/' | relative_url }}">Projects</a>{% if site.rss_icon %}<a href="{{ '/feed.xml' | relative_url }}">RSS</a>{% endif %}{% if site.impressum_path %}<a href="{{ site.impressum_path | relative_url }}">Impressum</a>{% endif %}</nav>
-  </div>
-</footer>

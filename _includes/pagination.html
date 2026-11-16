@@ -1,7 +1,0 @@
-{% if paginator.total_pages > 1 %}
-<nav class="writing-pagination" aria-label="Writing pages">
-  {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path | relative_url }}" rel="prev">← Newer posts</a>{% else %}<span aria-disabled="true">← Newer posts</span>{% endif %}
-  <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}<a href="{{ paginator.next_page_path | relative_url }}" rel="next">Older posts →</a>{% else %}<span aria-disabled="true">Older posts →</span>{% endif %}
-</nav>
-{% endif %}

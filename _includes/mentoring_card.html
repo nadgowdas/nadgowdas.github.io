@@ -1,9 +1,0 @@
-{% assign engagement = include.engagement %}
-<article class="project-card mentoring-card">
-  <div class="project-card-body">
-    <p class="card-meta mentoring-meta"><span>{{ engagement.semester | escape }} · {{ engagement.role | escape }}</span>{% if engagement.status == 'current' %}<span class="mentoring-status">Current project</span>{% endif %}</p>
-    <h3><a href="{{ engagement.url }}">{{ engagement.title | escape }}</a></h3>
-    <p>{{ engagement.summary | escape }}</p>
-    <a class="text-link" href="{{ engagement.url }}">{{ engagement.link_label | default: 'View project on GitHub' }} <span aria-hidden="true">↗</span></a>
-  </div>
-</article>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>Shripad Nadgowda | RunEscape</title>
+<meta name="description" content="Dynamically injected utility functions">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="https://nadgowdas.github.io/projects/7_project/">
+<link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+
+<script>document.documentElement.classList.add('js');</script>
+
+<script src="/assets/js/theme.js"></script>
+<script defer src="/assets/js/dark_mode.js"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/modern.css">
+
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header site-header--sticky">
+  <div class="container header-inner">
+    <a class="site-brand" href="/">Shripad Nadgowda</a>
+    <div class="header-controls">
+      <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false">
+        <span>Menu</span>
+        <svg width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+      
+      <button id="light-toggle" class="theme-toggle" type="button" aria-label="Use dark theme" aria-pressed="false" title="Use dark theme">
+        <svg class="theme-moon" width="19" height="19" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.4 13.1A8.5 8.5 0 0 1 10.9 3.6a8.5 8.5 0 1 0 9.5 9.5Z"></path></svg>
+        <svg class="theme-sun" width="19" height="19" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"></path></svg>
+      </button>
+      
+    </div>
+    <nav id="site-navigation" class="site-navigation" aria-label="Primary navigation">
+      <ul>
+        
+          
+          
+          <li><a href="/blog/">Writing</a></li>
+        
+          
+          
+          <li><a href="/publications/">Research</a></li>
+        
+          
+          
+          <li><a href="/talks/">Talks</a></li>
+        
+          
+          
+          <li><a href="/">About</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+
+    <main id="main-content" class="container site-content" tabindex="-1">
+      <div class="page">
+  <header class="post-header"><h1 class="post-title">RunEscape</h1>
+<p class="post-description">Dynamically injected utility functions</p></header>
+  <article class="page-content"><div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <img src="/assets/img/thumbs/5.jpg" alt="RunEscape" class="img-fluid rounded" loading="lazy">
+    </div>
+</div>
+<div class="caption">
+    RunEscape: Dynamic Utility for Cloud
+</div>
+
+<p>As I got more into managing cloud-native applications on kubernetes, I started to realize our existing models of packaging a container image to make it look more like traditional VM image with all OS utility functions, with any required network/file management tools was very in-efficient. It made our container images bulky and exposed them to larger attack surface. At the same time, micro-containers, multi-stage build patterns started becoming popular and we started to brainstorm about this space with my colleagues, we came up with “runescape”. What if we could dynamically inject all utility functions to our container application at  runtime? We  would need sfew  tricks with namespace sharing, affinity placements and careful removal, but yes should be possible.</p>
+
+<p>Again, this  would be different than Istio sidecar, wherein the sidecar container is transparently added during the deployment and is parmanently attached to your application throughout the lifecycle. In RunEscape we are talking about scenarios, where you deploy your application first, and then at later point in time, say you want to run <code class="language-plaintext highlighter-rouge">top</code> inside the container – at that point you inject a sidecar containing only <code class="language-plaintext highlighter-rouge">top</code> utility into your application container, run it, capture the result and then remove the sidecar. Fancy huh ??</p>
+
+<p>This is also different than the approach described in this <a href="hhttps://engineering.salesforce.com/a-generic-sidecar-injector-for-kubernetes-c05eede1f6bb" target="_blank" rel="noopener noreferrer">post</a>. This approach is similar to the istio one, wherein the sidecar is attached throughout the  lifecycle of an application. We are talking about “on-demand” utility functions.</p>
+
+<p>If you want to learn more about “RunEscape”, I have listed some resources below:</p>
+
+<h3 id="paper-abstract">Paper Abstract:</h3>
+<p>Application runtimes are undergoing a fundamental transformation in the cloud, from general-purpose op- erating systems (OSes) in virtual machines (VMs) to lightweight, minimal OSes in microcontainers. On one hand, such transformation is helping reduce application footprint in the cloud to increase agility, density and to minimize attack surface. On the other hand it makes it challenging to implement system and application man- agement tasks. Inspired from the on-demand Function as a Service (FaaS) model in serverless computing, in RECap we are designing a cloud-native solution to deliver core systems and application management tasks through specially-managed Capsule containers. Capsule containers are dynamically attached to the running containers for the duration of their implemented function and are safely removed from application context afterwards. More generally, RECap framework allows us to design disaggregated on-demand managed service delivery for containers in the cloud. In this paper, we describe the motivation and the emerging opportunity for RECap in the cloud. We discuss its core design principles, performance, security and manageability trade-offs. We present current design of RECap for the Kubernetes platform.</p>
+
+<h3 id="paper-link">Paper Link:</h3>
+<p><a href="https://www.usenix.org/conference/hotcloud18/presentation/nadgowda" target="_blank" rel="noopener noreferrer">Click Here</a></p>
+
+</article>
+</div>
+
+    </main>
+    <footer class="site-footer">
+  <div class="container footer-inner">
+    <div>
+<a class="footer-name" href="/">Shripad Nadgowda</a><p>© 2026 · Built with <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> and hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>.
+</p>
+</div>
+    <nav aria-label="Footer navigation"><a href="/projects/">Projects</a><a href="/feed.xml">RSS</a></nav>
+  </div>
+</footer>
+
+    <script defer src="/assets/js/common.js"></script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+<script defer src="/assets/js/zoom.js"></script>
+
+
+    
+<!-- MathJax -->
+<script type="text/javascript">
+  window.MathJax = {
+    tex: {
+      tags: 'ams'
+    }
+  };
+</script>
+<script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+
+
+    
+
+
+
+
+  </body>
+</html>

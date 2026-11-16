@@ -1,8 +1,0 @@
-{% if site.news.size > 0 %}
-<ul class="news-list">
-  {% assign news = site.news | sort: 'date' | reverse %}
-  {% for item in news limit:site.news_limit %}
-  <li><time datetime="{{ item.date | date_to_xmlschema }}">{{ item.date | date: '%b %-d, %Y' }}</time><div>{% if item.inline %}{{ item.content | emojify }}{% else %}<a href="{{ item.url | relative_url }}">{{ item.title }}</a>{% endif %}</div></li>
-  {% endfor %}
-</ul>
-{% endif %}
