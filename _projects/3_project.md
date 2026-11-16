@@ -3,17 +3,18 @@ layout: page
 title: confuse
 description: Container Filesystem in Userspace
 img: assets/img/4.jpg
+thumbnail: assets/img/thumbs/4.jpg
 importance: 1
 category: work
 ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/4.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
+        <img src="{{ '/assets/img/thumbs/4.jpg' | relative_url }}" alt="{{ page.title | escape }}" class="img-fluid rounded" loading="lazy">
     </div>
 </div>
 <div class="caption">
-    This image can also have a caption. It's like magic.
+    Reconstructing container filesystems in userspace.
 </div>
 
 I was really fascinated by the open-source project started by my colleagues around out-of-band container introspection. It is called <a href="https://github.com/cloudviz/agentless-system-crawler">agentless-system-crawler</a>. This tool allowed us to very efficiently capture the state of running container in a JSON object, which then can be transferred to dedicated  analytic platform for security analytics. And this solution was deployed on IBM Cloud  for image and container scanning. Although, it required  us to build "a new" analytic solution that would first parse that JSON object.

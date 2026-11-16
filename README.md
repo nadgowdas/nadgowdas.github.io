@@ -1,5 +1,11 @@
 # Shripad Nadgowda Personal Page
 
+## Local development
+
+Use Ruby 3.3, then run `bundle install` and `bundle exec jekyll serve`. The site is available at `http://localhost:4000`.
+
+The custom theme uses `_layouts`, `_includes`, and `assets/css/modern.css`. Edit `_data/navigation.yml` for the menu and `_data/talks.yml` for talks. Add `selected={true}` and a `summary` to a bibliography entry to feature it on the homepage. Project thumbnails are optional: `thumbnail` falls back to the original `img`.
+
 [![build status](https://travis-ci.org/alshedivat/al-folio.svg?branch=master)](https://travis-ci.org/alshedivat/al-folio)
 [![demo](https://img.shields.io/badge/theme-demo-brightgreen.svg)](https://alshedivat.github.io/al-folio/)
 [![GitHub contributors](https://img.shields.io/github/contributors/alshedivat/al-folio.svg)](https://github.com/alshedivat/al-folio/graphs/contributors/)

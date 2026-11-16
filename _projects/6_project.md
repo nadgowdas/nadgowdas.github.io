@@ -3,6 +3,7 @@ layout: page
 title: Paracloud
 description: Making  your applications aware of cloud
 img: assets/img/4.jpg
+thumbnail: assets/img/thumbs/4.jpg
 importance: 1
 category: work
 ---

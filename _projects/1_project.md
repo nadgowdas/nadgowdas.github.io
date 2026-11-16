@@ -3,13 +3,14 @@ layout: page
 title: GitSecure
 description: Code Risk Analyzer 
 img: assets/img/10.jpg
+thumbnail: assets/img/thumbs/10.jpg
 importance: 1
 category: work
 ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/10.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
+        <img src="{{ '/assets/img/thumbs/10.jpg' | relative_url }}" alt="{{ page.title | escape }}" class="img-fluid rounded" loading="lazy">
     </div>
 </div>
 <div class="caption">

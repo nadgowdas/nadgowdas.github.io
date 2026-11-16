@@ -1,51 +1,39 @@
-// Has to be in the head tag, otherwise a flicker effect will occur.
+(function () {
+  "use strict";
+  var root = document.documentElement;
+  var preference = null;
+  try { preference = localStorage.getItem("theme"); } catch (error) {}
+  var hasPreference = preference === "light" || preference === "dark";
+  var systemTheme = window.matchMedia ? window.matchMedia("(prefers-color-scheme: dark)") : null;
 
-let toggleTheme = (theme) => {
-  if (theme == "dark") {
-    setTheme("light");
-  } else {
-    setTheme("dark");
+  function updateControl() {
+    var control = document.getElementById("light-toggle");
+    if (!control) return;
+    var dark = root.getAttribute("data-theme") === "dark";
+    control.setAttribute("aria-pressed", String(dark));
+    control.setAttribute("title", dark ? "Use light theme" : "Use dark theme");
   }
-}
 
-
-let setTheme = (theme) =>  {
-  transTheme();
-  if (theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-  }
-  else {
-    document.documentElement.removeAttribute("data-theme");
-  }
-  localStorage.setItem("theme", theme);
-  
-  // Updates the background of medium-zoom overlay.
-  if (typeof medium_zoom !== 'undefined') {
-    medium_zoom.update({
-      background: getComputedStyle(document.documentElement)
-          .getPropertyValue('--global-bg-color') + 'ee',  // + 'ee' for trasparency.
-    })
-  }
-};
-
-
-let transTheme = () => {
-  document.documentElement.classList.add("transition");
-  window.setTimeout(() => {
-    document.documentElement.classList.remove("transition");
-  }, 500)
-}
-
-
-let initTheme = (theme) => {
-  if (theme == null) {
-    const userPref = window.matchMedia;
-    if (userPref && userPref('(prefers-color-scheme: dark)').matches) {
-        theme = 'dark';
+  function applyTheme(theme, persist) {
+    theme = theme === "dark" ? "dark" : "light";
+    root.setAttribute("data-theme", theme);
+    if (persist) {
+      hasPreference = true;
+      try { localStorage.setItem("theme", theme); } catch (error) {}
+    }
+    updateControl();
+    if (window.medium_zoom && window.medium_zoom.update) {
+      window.medium_zoom.update({ background: getComputedStyle(root).getPropertyValue("--global-bg-color").trim() });
     }
   }
-  setTheme(theme);
-}
 
-
-initTheme(localStorage.getItem("theme"));
+  window.setTheme = function (theme) { applyTheme(theme, true); };
+  window.toggleTheme = function () { applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true); };
+  window.updateThemeControl = updateControl;
+  applyTheme(hasPreference ? preference : systemTheme && systemTheme.matches ? "dark" : "light", false);
+  if (systemTheme) {
+    var followSystem = function (event) { if (!hasPreference) applyTheme(event.matches ? "dark" : "light", false); };
+    if (systemTheme.addEventListener) systemTheme.addEventListener("change", followSystem);
+    else if (systemTheme.addListener) systemTheme.addListener(followSystem);
+  }
+}());

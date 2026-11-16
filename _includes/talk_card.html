@@ -1,0 +1,5 @@
+{% assign talk = include.talk %}
+<article class="talk-card{% if include.featured %} talk-card--featured{% endif %}">
+  <div class="talk-event"><p class="eyebrow">{{ talk.event | escape }}</p><p class="card-meta">{{ talk.year }}{% if talk.coauthor %} · With {{ talk.coauthor | escape }}{% endif %}</p></div>
+  <div class="talk-copy"><h3>{{ talk.title | escape }}</h3>{% if talk.summary %}<p class="card-description">{{ talk.summary | escape }}</p>{% endif %}<a class="text-link" href="{{ talk.url }}">{{ talk.link_label | default: 'View the talk' }} <span aria-hidden="true">↗</span></a></div>
+</article>

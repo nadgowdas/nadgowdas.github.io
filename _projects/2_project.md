@@ -1,15 +1,16 @@
 ---
 layout: page
 title: Cargo
-description: Container Migratioon 
+description: Container migration
 img: assets/img/6.jpg
+thumbnail: assets/img/thumbs/6.jpg
 importance: 2
 category: work
 ---
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% responsive_image path: assets/img/6.jpg title: "example image" class: "img-fluid rounded z-depth-1" %}
+        <img src="{{ '/assets/img/thumbs/6.jpg' | relative_url }}" alt="{{ page.title | escape }}" class="img-fluid rounded" loading="lazy">
     </div>
 </div>
 <div class="caption">

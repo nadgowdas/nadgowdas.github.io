@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  agent-going-rogue
+display_title: First chilling moment
 date:   2026-09-06 7:39:16
 description: My first chilling moment in the agentic world
 ---

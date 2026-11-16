@@ -1,0 +1,8 @@
+---
+---
+<article class="feature-card">
+  <p class="card-meta">{% if entry.month %}{{ entry.month | capitalize }} {% endif %}{{ entry.year }} · arXiv preprint</p>
+  <h3>{{ entry.title }}</h3>
+  {% if entry.summary %}<p class="card-description">{{ entry.summary }}</p>{% endif %}
+  <div class="card-links"><a href="https://arxiv.org/abs/{{ entry.arxiv }}">Read on arXiv <span aria-hidden="true">↗</span></a>{% if entry.pdf %}<a href="{{ entry.pdf }}">PDF <span aria-hidden="true">↗</span></a>{% endif %}</div>
+</article>

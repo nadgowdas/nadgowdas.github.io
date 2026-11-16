@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  humans-only-medium
+display_title: A humans-only medium
 date:   2026-09-07 7:39:16
 description: The urgency of a humans-only medium for communication
 ---
