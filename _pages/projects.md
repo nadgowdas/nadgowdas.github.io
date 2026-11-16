@@ -2,12 +2,13 @@
 layout: page
 title: Projects
 permalink: /projects/
-description: Projects in cloud infrastructure, reliability, and software supply chain security.
+description: Projects and student mentoring in cloud infrastructure, reliability, and software supply chain security.
 nav: true
 display_categories: [work, fun]
 ---
 
 <div class="projects">
+{% include mentoring.html %}
 {% for category in page.display_categories %}
   {% assign projects = site.projects | where: 'category', category | sort: 'importance' %}
   {% if projects.size > 0 %}

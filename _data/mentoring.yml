@@ -1,0 +1,49 @@
+- title: Load Modeling and Load Balancing Simulation Platform
+  semester: Fall 2026
+  year: 2026
+  status: current
+  role: Mentor
+  summary: A simulation platform for comparing how routing policies, server capacity, and downstream failures affect queues, latency, and rejected requests.
+  url: https://github.com/ec528-fall26/load-balancing
+  source_url: https://github.com/ec528-fall26/load-balancing#ec528-project--load-modeling-and-load-balancing-simulation-platform
+- title: "Cynthus: Orchestrating AI Applications on the Cloud"
+  semester: Fall 2024
+  year: 2024
+  status: past
+  role: Mentor
+  summary: A platform that simplifies AI application deployment through a command-line interface, automated resource management, and cloud infrastructure orchestration.
+  url: https://github.com/EC528-Fall-2024/orchestrating-ai-app-cloud
+  source_url: https://github.com/EC528-Fall-2024/orchestrating-ai-app-cloud#team
+- title: Understanding the Compositional Evolution of Kubernetes
+  semester: Fall 2023
+  year: 2023
+  status: past
+  role: Mentor
+  summary: Analyzing Kubernetes components and their vulnerabilities across releases, with an interactive timeline to help developers and maintainers understand changes.
+  url: https://github.com/EC528-Fall-2023/Evolution-of-Kubernetes-
+  source_url: https://github.com/EC528-Fall-2023/Evolution-of-Kubernetes-#collaborators
+- title: "SIMS: Securing the Integrity of Microservice Builds"
+  semester: Fall 2020
+  year: 2020
+  status: past
+  role: Mentor
+  summary: Signing and verifying Tekton pipeline steps with in-toto to establish trust in microservice builds and check execution integrity.
+  url: https://github.com/BU-CLOUD-F20/Securing_MS_Integrity
+  source_url: https://github.com/BU-CLOUD-F20/Securing_MS_Integrity#team-members
+- title: Deduplicating Cloud Functions
+  semester: Spring 2019
+  year: 2019
+  status: past
+  role: Mentor
+  summary: An event deduplication framework for serverless platforms that avoids redundant execution of stateless cloud functions.
+  url: https://github.com/bu-528-sp19/Deduplicating-Cloud-functions
+  source_url: https://github.com/bu-528-sp19/Deduplicating-Cloud-functions#mentor
+- title: Agentless Bare-Metal Introspection
+  semester: Spring 2018
+  year: 2018
+  status: past
+  role: Co-mentor
+  summary: Exploring non-intrusive security inspection of bare-metal systems using Bare Metal Imaging and the Agentless System Crawler.
+  url: https://okrieg.github.io/cc/PROJECTS/2018/all-projects.html#introspection
+  link_label: View course project brief
+  source_url: https://okrieg.github.io/cc/PROJECTS/2018/all-projects.html#introspection

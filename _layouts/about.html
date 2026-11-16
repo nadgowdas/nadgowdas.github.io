@@ -25,6 +25,14 @@ layout: default
     {% include talk_card.html talk=recent_talk featured=true %}
   </section>
   {% endif %}
+  {% assign current_engagement = site.data.mentoring | where: 'status', 'current' | first %}
+  {% if current_engagement %}
+  <section class="home-section mentoring-home" aria-labelledby="mentoring-title">
+    <div class="section-heading"><h2 id="mentoring-title">Mentoring</h2><a class="text-link" href="{{ '/projects/#boston-university' | relative_url }}">Boston University projects <span aria-hidden="true">↗</span></a></div>
+    <p class="mentoring-intro">I mentor student teams in Boston University’s EC528 cloud computing course, connecting systems research with practical engineering.</p>
+    {% include mentoring_card.html engagement=current_engagement %}
+  </section>
+  {% endif %}
   <section class="home-section" aria-labelledby="writing-title">
     <div class="section-heading"><h2 id="writing-title">Latest writing</h2><a class="text-link" href="{{ '/blog/' | relative_url }}">All posts <span aria-hidden="true">↗</span></a></div>
     {% include post_list.html posts=site.posts limit=3 %}

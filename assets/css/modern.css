@@ -185,6 +185,17 @@ pre code { padding: 0; background: transparent; color: inherit; }
 .project-card h3 a { color: var(--global-text-color); }
 .project-card p { color: var(--global-text-color-light); font-size: 15px; }
 .project-card .text-link { font-size: 13px; margin-right: 16px; margin-top: 4px; }
+.mentoring-projects { scroll-margin-top: 110px; padding-bottom: 40px; border-bottom: 1px solid var(--global-divider-color); }
+.mentoring-intro { max-width: 78ch; color: var(--global-text-color-light); font-size: 16px; margin-bottom: 28px; }
+.mentoring-group-title { font-family: var(--font-body); font-size: 16px; font-weight: 600; letter-spacing: 0; margin: 28px 0 16px; }
+.mentoring-card .card-meta { font-size: 13px; margin-bottom: 16px; }
+.mentoring-meta { display: flex; align-items: center; flex-wrap: wrap; gap: 10px 18px; }
+.mentoring-meta span { color: inherit; }
+.mentoring-status { color: var(--global-theme-color) !important; border: 1px solid var(--global-divider-color); border-radius: 4px; font-size: 12px; padding: 2px 9px; }
+.mentoring-card h3 { font-family: var(--font-body); font-size: 24px; font-weight: 600; line-height: 1.4; letter-spacing: -.025em; }
+.mentoring-current .project-card-body, .mentoring-home .project-card-body { padding: 28px; }
+.mentoring-current .mentoring-card p, .mentoring-home .mentoring-card p { max-width: 78ch; }
+.mentoring-current .mentoring-card .card-meta, .mentoring-home .mentoring-card .card-meta { font-size: 13px; }
 .page-content > p, .page-content > h2, .page-content > h3 { max-width: 78ch; }
 .table { color: var(--global-text-color); }
 .table th { color: var(--global-text-color-light); font-weight: 500; }
